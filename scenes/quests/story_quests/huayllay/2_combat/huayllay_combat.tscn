@@ -13,15 +13,10 @@
 [ext_resource type="SpriteFrames" uid="uid://jnq3ufqsol6s" path="res://scenes/quests/story_quests/huayllay/2_combat/combat_components/throwing_enemy_huayllay.tres" id="11_318en"]
 [ext_resource type="PackedScene" uid="uid://cbef3rnjofke7" path="res://scenes/quests/story_quests/huayllay/2_combat/combat_components/projectile_huayllay.tscn" id="12_qeu44"]
 [ext_resource type="PackedScene" uid="uid://y8ha8abfyap2" path="res://scenes/game_elements/props/filling_barrel/filling_barrel.tscn" id="13_kbwgf"]
-
-[ext_resource type="SpriteFrames" uid="uid://cctntx307fbd1" path="res://scenes/quests/story_quests/huayllay/2_combat/combat_components/runestones.tres" id="14_lqy8c"]
-[ext_resource type="PackedScene" uid="uid://fuhl3l6gxq5k" path="res://scenes/game_elements/props/collectible_item/collectible_item.tscn" id="16_7etgq"]
-[ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/globals/game_state/inventory/inventory_item.gd" id="17_t6lua"]
-
-[ext_resource type="SpriteFrames" uid="uid://d8k2huayllayrs1" path="res://scenes/quests/story_quests/huayllay/2_combat/combat_components/runestones.tres" id="14_lqy8c"]
+[ext_resource type="SpriteFrames" uid="uid://br07bsrs7c811" path="res://scenes/quests/story_quests/huayllay/2_combat/combat_components/runestones.tres" id="14_lqy8c"]
 [ext_resource type="PackedScene" uid="uid://fuhl3l6gxq5k" path="res://scenes/game_elements/props/collectible_item/collectible_item.tscn" id="15_i1y2i"]
 [ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/globals/game_state/inventory/inventory_item.gd" id="16_q0g68"]
-
+[ext_resource type="Resource" uid="uid://dlwrvvmjswh1c" path="res://scenes/quests/story_quests/huayllay/2_combat/combat_components/huayllay_combat.dialogue" id="17_7etgq"]
 [ext_resource type="PackedScene" uid="uid://dmevaymmt6wco" path="res://scenes/game_elements/props/powerup/powerup.tscn" id="17_xmsnp"]
 [ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="18_w6b72"]
 [ext_resource type="PackedScene" uid="uid://c0374lgarm8gj" path="res://scenes/game_elements/fx/clouds_shadow/clouds_shadow.tscn" id="19_7etgq"]
@@ -31,9 +26,8 @@
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbwgf"]
 height = 42.0
 
-[sub_resource type="Resource" id="Resource_t6lua"]
-script = ExtResource("17_t6lua")
-type = 1
+[sub_resource type="Resource" id="Resource_lqy8c"]
+script = ExtResource("16_q0g68")
 metadata/_custom_type_script = "uid://bgmwplmj3bfls"
 
 [node name="HuayllayCombat" type="Node2D" unique_id=1610054737]
@@ -140,12 +134,12 @@ sprite_frames = ExtResource("14_lqy8c")
 label = ""
 color = Color(1, 1, 1, 1)
 
-[node name="CollectibleItem2" parent="OnTheGround" unique_id=327991066 instance=ExtResource("16_7etgq")]
+[node name="CollectibleItem2" parent="OnTheGround" unique_id=327991066 instance=ExtResource("15_i1y2i")]
 unique_name_in_owner = true
 position = Vector2(868, 303)
 revealed = false
-next_scene = "uid://x3wm2ce0ax8i"
-item = SubResource("Resource_t6lua")
+next_scene = "uid://08fij1q8pjom"
+item = SubResource("Resource_lqy8c")
 collected_dialogue = ExtResource("17_7etgq")
 dialogue_title = &"well_done"
 
