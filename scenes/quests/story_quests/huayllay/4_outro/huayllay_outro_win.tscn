@@ -158,7 +158,7 @@ animation = &"filling"
 script = ExtResource("4_1gi1u")
 dialogue = ExtResource("5_6s3ex")
 animation_player = NodePath("../OnTheGround/AnimationPlayer")
-next_scene = "uid://b4w3gbvhukyht"
+next_scene = "uid://cmacgl172uay2"
 metadata/_custom_type_script = "uid://x1mxt6bmei2o"
 
 [node name="Forest" type="StaticBody2D" parent="." unique_id=1541633486]
