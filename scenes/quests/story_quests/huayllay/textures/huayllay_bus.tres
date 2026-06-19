@@ -1,0 +1,14 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://dopljuln1tfq1"]
+
+[ext_resource type="Texture2D" uid="uid://cofkhv2328q4w" path="res://scenes/quests/story_quests/huayllay/textures/car.png" id="1_qtwse"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qtwse")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]

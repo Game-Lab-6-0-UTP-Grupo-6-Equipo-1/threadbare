@@ -6,6 +6,7 @@
 do animation_player.play(&"bus_on")
 Narrador: "Las puertas del bus se abren lentamente... Luis, un joven con la mirada agotada por la rutina de la ciudad, desciende por fín del vehículo"
 do animation_player.animation.finished
+do animation_player.play(&"off")
 do animation_player.play(&"bus_off")
 Luis: "Tierra firme, por fin... Ya sentía que este viaje no terminaba nunca."
 Luis: "Solo necesito respirar. Dejar atrás todo el ruido, el estrés y despejar la mente un rato."
