@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://b4w3gbvhukyht"]
+[gd_scene format=4 uid="uid://cmacgl172uay2"]
 
 [ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="1_q07ny"]
 [ext_resource type="TileSet" uid="uid://cae54iogw2ef0" path="res://scenes/quests/story_quests/huayllay/tiles/huayllay_exterior_floors.tres" id="2_cmaay"]
