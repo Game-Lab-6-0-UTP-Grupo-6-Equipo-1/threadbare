@@ -1,7 +1,7 @@
 [gd_scene format=4 uid="uid://kebpnex10s0p"]
 
 [ext_resource type="TileSet" uid="uid://bpyv8qhmeyo6l" path="res://scenes/quests/story_quests/shjourney/3_shjourney_intro/tilesetIntro.tres" id="2_0vaf7"]
-[ext_resource type="SpriteFrames" uid="uid://dxrmerjyhbv7p" path="res://scenes/quests/story_quests/huayllay/2_combat/combat_components/huayllay_target_spriteframes.tres" id="3_gtx0w"]
+[ext_resource type="SpriteFrames" uid="uid://dopljuln1tfq1" path="res://scenes/quests/story_quests/huayllay/textures/huayllay_bus.tres" id="3_gtx0w"]
 [ext_resource type="Resource" uid="uid://oxficbyhbf2s" path="res://scenes/quests/story_quests/huayllay/0_intro/intro_components/huayllay_intro_exploration.dialogue" id="4_2awkw"]
 [ext_resource type="SpriteFrames" uid="uid://ckvi0pb0mnugd" path="res://scenes/quests/story_quests/huayllay/player_components/huayllay_player.tres" id="4_tigv4"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="5_nr1xt"]
@@ -32,6 +32,54 @@ tracks/1/keys = {
 "update": 0,
 "values": [Vector2(-134, 349)]
 }
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OnTheGround/Character/Bus:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, -90)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("OnTheGround/Character/Bus:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("OnTheGround/Bus_S:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("OnTheGround/Character:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_biwba"]
 resource_name = "bus_off"
@@ -59,6 +107,42 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [&"walk", &"idle"]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OnTheGround/Character/Bus:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("OnTheGround/Bus_S:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("OnTheGround/Character:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_rv67a"]
@@ -91,15 +175,18 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("OnTheGround/Bus:position")
+tracks/2/path = NodePath("OnTheGround/Character/Bus:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(-134, 349), Vector2(318, 349)]
+"values": [Vector2(0, -90), Vector2(0, -90)]
 }
+
+[sub_resource type="Animation" id="Animation_ii021"]
+resource_name = "off"
 
 [sub_resource type="Animation" id="Animation_0vaf7"]
 resource_name = "walk_off"
@@ -162,6 +249,7 @@ _data = {
 &"RESET": SubResource("Animation_o3l1h"),
 &"bus_off": SubResource("Animation_biwba"),
 &"bus_on": SubResource("Animation_rv67a"),
+&"off": SubResource("Animation_ii021"),
 &"walk_off": SubResource("Animation_0vaf7"),
 &"walk_on": SubResource("Animation_gtx0w")
 }
@@ -169,7 +257,7 @@ _data = {
 [node name="HuayllayIntro" type="Node2D" unique_id=2049284984]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=1848969179]
-color = Color(0.9999998, 0.8899193, 0.80421543, 1)
+color = Color(1, 0.76862746, 0.6627451, 1)
 
 [node name="TileMapLayers" type="Node2D" parent="." unique_id=506246995]
 position = Vector2(936, 0)
@@ -209,11 +297,23 @@ tile_set = ExtResource("2_0vaf7")
 [node name="OnTheGround" type="Node2D" parent="." unique_id=836096441]
 y_sort_enabled = true
 
+[node name="Bus_S" type="AnimatedSprite2D" parent="OnTheGround" unique_id=907252827]
+visible = false
+position = Vector2(317.28, 260.215)
+scale = Vector2(3.96, 3.96)
+sprite_frames = ExtResource("3_gtx0w")
+
 [node name="Character" type="AnimatedSprite2D" parent="OnTheGround" unique_id=169229228]
+visible = false
 position = Vector2(-134, 349)
 sprite_frames = ExtResource("4_tigv4")
 animation = &"idle"
 autoplay = "idle"
+
+[node name="Bus" type="AnimatedSprite2D" parent="OnTheGround/Character" unique_id=2112124292]
+position = Vector2(0, -90)
+scale = Vector2(3.96, 3.96)
+sprite_frames = ExtResource("3_gtx0w")
 
 [node name="Camera2D" type="Camera2D" parent="OnTheGround/Character" unique_id=1064875179]
 position = Vector2(1.4933319, -9)
@@ -229,11 +329,6 @@ editor_draw_limits = true
 [node name="AnimationPlayer" type="AnimationPlayer" parent="OnTheGround" unique_id=49807179]
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_xo7iv")
-
-[node name="Bus" type="AnimatedSprite2D" parent="OnTheGround" unique_id=2112124292]
-position = Vector2(-134, 349)
-sprite_frames = ExtResource("3_gtx0w")
-animation = &"filling"
 
 [node name="ScreenOverlay" type="CanvasLayer" parent="." unique_id=826076597]
 
