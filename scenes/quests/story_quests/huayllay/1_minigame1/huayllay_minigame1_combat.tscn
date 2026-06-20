@@ -2,28 +2,29 @@
 
 [ext_resource type="Script" uid="uid://pk3ucq7e2eah" path="res://scenes/game_logic/player_mode.gd" id="1_aqd58"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="2_qeu44"]
+[ext_resource type="Resource" uid="uid://cdmyrdy4vta7o" path="res://scenes/quests/story_quests/huayllay/1_minigame1/minigame1_components/huayllay_minigame1_combat.dialogue" id="3_aeve2"]
 [ext_resource type="Script" uid="uid://cp54mgi54nywo" path="res://scenes/game_logic/fill_game_logic.gd" id="4_t6lua"]
 [ext_resource type="TileSet" uid="uid://72ej5wu5goh" path="res://scenes/quests/story_quests/huayllay/tiles/huayllay_cave_grounds.tres" id="5_ypm52"]
 [ext_resource type="TileSet" uid="uid://c7knenb6cvtee" path="res://scenes/quests/story_quests/huayllay/tiles/huayllay_cave_walls.tres" id="8_5rrlh"]
 [ext_resource type="PackedScene" uid="uid://iu2q66clupc6" path="res://scenes/game_elements/characters/player/player.tscn" id="8_88slx"]
 [ext_resource type="TileSet" uid="uid://bjj3qjhxoxw0a" path="res://scenes/quests/story_quests/huayllay/tiles/huayllay_cave_ceilings.tres" id="9_jldpk"]
-[ext_resource type="SpriteFrames" uid="uid://cjei4chr6jl7u" path="res://scenes/quests/story_quests/huayllay/2_combat/luis_components/after_the_tremor_bryan.tres" id="9_qeu44"]
+[ext_resource type="SpriteFrames" uid="uid://cjei4chr6jl7u" path="res://scenes/quests/story_quests/huayllay/2_minigame2/luis_components/after_the_tremor_bryan.tres" id="9_qeu44"]
 [ext_resource type="AudioStream" uid="uid://cx6jv2cflrmqu" path="res://assets/third_party/sounds/characters/player/Foot.ogg" id="10_318en"]
 [ext_resource type="PackedScene" uid="uid://b82nsrh332syj" path="res://scenes/game_elements/characters/enemies/throwing_enemy/throwing_enemy.tscn" id="10_gut2u"]
-[ext_resource type="SpriteFrames" uid="uid://jnq3ufqsol6s" path="res://scenes/quests/story_quests/huayllay/2_combat/combat_components/throwing_enemy_huayllay.tres" id="11_318en"]
-[ext_resource type="PackedScene" uid="uid://cbef3rnjofke7" path="res://scenes/quests/story_quests/huayllay/2_combat/combat_components/projectile_huayllay.tscn" id="12_qeu44"]
+[ext_resource type="SpriteFrames" uid="uid://jnq3ufqsol6s" path="res://scenes/quests/story_quests/huayllay/1_minigame1/minigame1_components/huayllay_throwing_enemy.tres" id="11_318en"]
+[ext_resource type="PackedScene" uid="uid://cbef3rnjofke7" path="res://scenes/quests/story_quests/huayllay/1_minigame1/minigame1_components/huayllay_projectile.tscn" id="12_qeu44"]
 [ext_resource type="PackedScene" uid="uid://y8ha8abfyap2" path="res://scenes/game_elements/props/filling_barrel/filling_barrel.tscn" id="13_kbwgf"]
-[ext_resource type="SpriteFrames" uid="uid://br07bsrs7c811" path="res://scenes/quests/story_quests/huayllay/2_combat/combat_components/runestones.tres" id="14_lqy8c"]
+[ext_resource type="SpriteFrames" uid="uid://br07bsrs7c811" path="res://scenes/quests/story_quests/huayllay/1_minigame1/minigame1_components/huayllay_runestones.tres" id="14_lqy8c"]
 [ext_resource type="PackedScene" uid="uid://fuhl3l6gxq5k" path="res://scenes/game_elements/props/collectible_item/collectible_item.tscn" id="15_i1y2i"]
 [ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/globals/game_state/inventory/inventory_item.gd" id="16_q0g68"]
-[ext_resource type="Resource" uid="uid://dlwrvvmjswh1c" path="res://scenes/quests/story_quests/huayllay/2_combat/combat_components/huayllay_combat.dialogue" id="17_7etgq"]
+[ext_resource type="Resource" uid="uid://dlwrvvmjswh1c" path="res://scenes/quests/story_quests/huayllay/2_minigame2/combat_components/huayllay_combat.dialogue" id="17_7etgq"]
 [ext_resource type="PackedScene" uid="uid://dmevaymmt6wco" path="res://scenes/game_elements/props/powerup/powerup.tscn" id="17_xmsnp"]
 [ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="18_w6b72"]
 [ext_resource type="PackedScene" uid="uid://c0374lgarm8gj" path="res://scenes/game_elements/fx/clouds_shadow/clouds_shadow.tscn" id="19_7etgq"]
 [ext_resource type="Script" uid="uid://c8405c212rbn6" path="res://scenes/game_elements/props/background_music/components/background_music.gd" id="21_88slx"]
-[ext_resource type="AudioStream" uid="uid://cvw6fqeq2gxmq" path="res://scenes/quests/story_quests/huayllay/2_combat/combat_components/combat2_music.ogg" id="22_wnfxd"]
+[ext_resource type="AudioStream" uid="uid://cvw6fqeq2gxmq" path="res://scenes/quests/story_quests/huayllay/1_minigame1/minigame1_components/huayllay_minigame1_combat_music.ogg" id="22_wnfxd"]
 [ext_resource type="SpriteFrames" uid="uid://b4pmxoo8o8e5o" path="res://scenes/quests/story_quests/huayllay/textures/huayllay_torch.tres" id="23_4u1ai"]
-[ext_resource type="Texture2D" uid="uid://dpxca3doaglwd" path="res://scenes/quests/story_quests/huayllay/1_stealth/stealth_components/luz.png" id="24_5rrlh"]
+[ext_resource type="Texture2D" uid="uid://dpxca3doaglwd" path="res://scenes/quests/story_quests/huayllay/1_minigame1/minigame1_components/huayllay_luz.png" id="24_5rrlh"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbwgf"]
 height = 42.0
@@ -46,7 +47,7 @@ metadata/_custom_type_script = "uid://pk3ucq7e2eah"
 
 [node name="Cinematic" type="Node2D" parent="." unique_id=1804874187]
 script = ExtResource("2_qeu44")
-dialogue = ExtResource("17_7etgq")
+dialogue = ExtResource("3_aeve2")
 metadata/_custom_type_script = "uid://x1mxt6bmei2o"
 
 [node name="FillGameLogic" type="Node" parent="." unique_id=1964770711]

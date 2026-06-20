@@ -2,7 +2,7 @@
 
 [ext_resource type="TileSet" uid="uid://bpyv8qhmeyo6l" path="res://scenes/quests/story_quests/shjourney/3_shjourney_intro/tilesetIntro.tres" id="2_yplfv"]
 [ext_resource type="SpriteFrames" uid="uid://bpfnbr7ig4s5g" path="res://scenes/game_elements/characters/components/sprite_frames/elder.tres" id="3_5xgsy"]
-[ext_resource type="SpriteFrames" uid="uid://ckvi0pb0mnugd" path="res://scenes/quests/story_quests/huayllay/player_components/huayllay_player.tres" id="4_p5wc2"]
+[ext_resource type="SpriteFrames" uid="uid://c4ge8p7eyk56r" path="res://scenes/quests/story_quests/huayllay/player_components/huayllay_player.tres" id="4_p5wc2"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="5_ocx3e"]
 [ext_resource type="Resource" uid="uid://ch0offauatmcj" path="res://scenes/quests/story_quests/huayllay/0_intro/intro_components/huayllay_intro_meeting.dialogue" id="5_st5c4"]
 

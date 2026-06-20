@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cdmyrdy4vta7o"
+path="res://.godot/imported/huayllay_minigame1_combat.dialogue-17f812c64fad7b4b33e9f0030c088011.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/huayllay/1_minigame1/minigame1_components/huayllay_minigame1_combat.dialogue"
+dest_files=["res://.godot/imported/huayllay_minigame1_combat.dialogue-17f812c64fad7b4b33e9f0030c088011.tres"]
+
+[params]
+
+defaults=true

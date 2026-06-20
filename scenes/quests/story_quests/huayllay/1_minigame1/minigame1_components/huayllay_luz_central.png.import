@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b2kcu7e3bsp5k"
-path="res://.godot/imported/luz_central.png-cb0ed65141f2cdcfdcdfdc4da7880846.ctex"
+path="res://.godot/imported/huayllay_luz_central.png-f91c0c4774c9c8a46380b733091cb940.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/quests/story_quests/huayllay/1_stealth/stealth_components/luz_central.png"
-dest_files=["res://.godot/imported/luz_central.png-cb0ed65141f2cdcfdcdfdc4da7880846.ctex"]
+source_file="res://scenes/quests/story_quests/huayllay/1_minigame1/minigame1_components/huayllay_luz_central.png"
+dest_files=["res://.godot/imported/huayllay_luz_central.png-f91c0c4774c9c8a46380b733091cb940.ctex"]
 
 [params]
 

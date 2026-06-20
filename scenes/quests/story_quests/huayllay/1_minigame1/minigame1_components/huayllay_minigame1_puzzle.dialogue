@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: The Threadbare Authors
+# SPDX-License-Identifier: MPL-2.0
+~ start
+Narrador: "Las piedras de esta sala resuenan en la oscuridad. Escucha la melodía. Memoriza los elementos. Repite la canción"
+Luis: "Qué oscuro está..."
+=> END
+~ well_done
+Luis: "Listo. Camino despejado. ¡Ya puedo seguir!"
+Narrador: ""
+=> END
