@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://xxmtyhjoff4u"
-path="res://.godot/imported/runestone.png-40ee78919157e986670d4688b1980759.ctex"
+uid="uid://cp55kdrx1fkt6"
+path="res://.godot/imported/bryan_caminando-6f2e.png-1ff9fa97590ff84609b2d868eb3088d8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/quests/story_quests/huayllay/2_combat/combat_components/runestone.png"
-dest_files=["res://.godot/imported/runestone.png-40ee78919157e986670d4688b1980759.ctex"]
+source_file="res://scenes/quests/story_quests/huayllay/2_minigame2/luis_components/bryan_caminando-6f2e.png"
+dest_files=["res://.godot/imported/bryan_caminando-6f2e.png-1ff9fa97590ff84609b2d868eb3088d8.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://bt1yjnq33yn5o"]
+[gd_scene format=4 uid="uid://ci11owtli6atn"]
 
 [ext_resource type="Material" uid="uid://64aeyjitacv3" path="res://scenes/game_elements/props/void/void_chromakey_material.tres" id="1_m0omm"]
 [ext_resource type="TileSet" uid="uid://h1m3qj4t0tsk" path="res://scenes/quests/story_quests/huayllay/tiles/huayllay_water.tres" id="2_o0byq"]

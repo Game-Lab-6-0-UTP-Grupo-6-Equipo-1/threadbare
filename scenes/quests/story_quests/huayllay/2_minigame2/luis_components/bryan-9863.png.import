@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dpxca3doaglwd"
-path="res://.godot/imported/luz.png-c55197578a60f6fa3a8481b95ddd69ee.ctex"
+uid="uid://reqju2bo4ae6"
+path="res://.godot/imported/bryan-9863.png-4ab4ad7d4cc31cdfe839dac0b97d0cd6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scenes/quests/story_quests/huayllay/1_stealth/stealth_components/luz.png"
-dest_files=["res://.godot/imported/luz.png-c55197578a60f6fa3a8481b95ddd69ee.ctex"]
+source_file="res://scenes/quests/story_quests/huayllay/2_minigame2/luis_components/bryan-9863.png"
+dest_files=["res://.godot/imported/bryan-9863.png-4ab4ad7d4cc31cdfe839dac0b97d0cd6.ctex"]
 
 [params]
 

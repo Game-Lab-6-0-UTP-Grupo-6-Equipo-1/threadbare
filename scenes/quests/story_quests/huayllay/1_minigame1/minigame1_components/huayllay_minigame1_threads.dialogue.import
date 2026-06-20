@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cliwkwjgdrm0c"
+path="res://.godot/imported/huayllay_minigame1_threads.dialogue-b77b1c15c5e2c6562d976c04b120efcb.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/huayllay/1_minigame1/minigame1_components/huayllay_minigame1_threads.dialogue"
+dest_files=["res://.godot/imported/huayllay_minigame1_threads.dialogue-b77b1c15c5e2c6562d976c04b120efcb.tres"]
+
+[params]
+
+defaults=true

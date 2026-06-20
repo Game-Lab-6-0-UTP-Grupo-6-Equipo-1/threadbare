@@ -1,6 +1,6 @@
 [gd_resource type="SpriteFrames" format=3 uid="uid://br07bsrs7c811"]
 
-[ext_resource type="Texture2D" uid="uid://xxmtyhjoff4u" path="res://scenes/quests/story_quests/huayllay/2_combat/combat_components/runestone.png" id="1_ek4lr"]
+[ext_resource type="Texture2D" uid="uid://xxmtyhjoff4u" path="res://scenes/quests/story_quests/huayllay/1_minigame1/minigame1_components/huayllay_runestone.png" id="1_ek4lr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k2uqa"]
 atlas = ExtResource("1_ek4lr")

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bofv3bcwj3rx2" path="res://scenes/game_elements/props/projectile/components/projectile.gd" id="1_3vioj"]
 [ext_resource type="SpriteFrames" uid="uid://qtq61h7mprbc" path="res://scenes/quests/story_quests/el_juguete_perdido/2_combat/components/projectile_spriteframes.tres" id="2_h4jum"]
-[ext_resource type="Texture2D" uid="uid://b2kcu7e3bsp5k" path="res://scenes/quests/story_quests/huayllay/1_stealth/stealth_components/luz_central.png" id="3_v76hq"]
+[ext_resource type="Texture2D" uid="uid://b2kcu7e3bsp5k" path="res://scenes/quests/story_quests/huayllay/1_minigame1/minigame1_components/huayllay_luz_central.png" id="3_v76hq"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tbgi4"]
 friction = 0.0

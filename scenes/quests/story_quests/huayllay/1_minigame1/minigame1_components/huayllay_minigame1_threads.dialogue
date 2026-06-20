@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: The Threadbare Authors
+# SPDX-License-Identifier: MPL-2.0
+~ start
+Narrador: "Guardias custodian los pasillos de esta sección."
+Narrador: "Evita su línea de visión, explora los rincones y encuentra la runa correcta para avanzar"
+Luis: "Debo seguir..."
+=> END
