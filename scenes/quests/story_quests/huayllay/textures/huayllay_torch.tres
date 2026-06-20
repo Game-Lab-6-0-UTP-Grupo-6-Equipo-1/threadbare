@@ -1,0 +1,32 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://b4pmxoo8o8e5o"]
+
+[ext_resource type="Texture2D" uid="uid://1shih80ivdk" path="res://scenes/quests/story_quests/huayllay/textures/huayllay_torch.png" id="1_qscua"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s46v0"]
+atlas = ExtResource("1_qscua")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b0ikc"]
+atlas = ExtResource("1_qscua")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yvn31"]
+atlas = ExtResource("1_qscua")
+region = Rect2(64, 0, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s46v0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b0ikc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yvn31")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
