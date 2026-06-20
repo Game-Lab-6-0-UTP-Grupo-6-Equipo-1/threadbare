@@ -1,0 +1,239 @@
+[gd_scene format=4 uid="uid://l8l0xkeujwng"]
+
+[ext_resource type="Script" uid="uid://pk3ucq7e2eah" path="res://scenes/game_logic/player_mode.gd" id="1_aqd58"]
+[ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="2_qeu44"]
+[ext_resource type="Script" uid="uid://cp54mgi54nywo" path="res://scenes/game_logic/fill_game_logic.gd" id="4_t6lua"]
+[ext_resource type="TileSet" uid="uid://72ej5wu5goh" path="res://scenes/quests/story_quests/huayllay/tiles/huayllay_cave_grounds.tres" id="5_ypm52"]
+[ext_resource type="TileSet" uid="uid://c7knenb6cvtee" path="res://scenes/quests/story_quests/huayllay/tiles/huayllay_cave_walls.tres" id="8_5rrlh"]
+[ext_resource type="PackedScene" uid="uid://iu2q66clupc6" path="res://scenes/game_elements/characters/player/player.tscn" id="8_88slx"]
+[ext_resource type="TileSet" uid="uid://bjj3qjhxoxw0a" path="res://scenes/quests/story_quests/huayllay/tiles/huayllay_cave_ceilings.tres" id="9_jldpk"]
+[ext_resource type="SpriteFrames" uid="uid://cjei4chr6jl7u" path="res://scenes/quests/story_quests/huayllay/2_combat/luis_components/after_the_tremor_bryan.tres" id="9_qeu44"]
+[ext_resource type="AudioStream" uid="uid://cx6jv2cflrmqu" path="res://assets/third_party/sounds/characters/player/Foot.ogg" id="10_318en"]
+[ext_resource type="PackedScene" uid="uid://b82nsrh332syj" path="res://scenes/game_elements/characters/enemies/throwing_enemy/throwing_enemy.tscn" id="10_gut2u"]
+[ext_resource type="SpriteFrames" uid="uid://jnq3ufqsol6s" path="res://scenes/quests/story_quests/huayllay/2_combat/combat_components/throwing_enemy_huayllay.tres" id="11_318en"]
+[ext_resource type="PackedScene" uid="uid://cbef3rnjofke7" path="res://scenes/quests/story_quests/huayllay/2_combat/combat_components/projectile_huayllay.tscn" id="12_qeu44"]
+[ext_resource type="PackedScene" uid="uid://y8ha8abfyap2" path="res://scenes/game_elements/props/filling_barrel/filling_barrel.tscn" id="13_kbwgf"]
+[ext_resource type="SpriteFrames" uid="uid://br07bsrs7c811" path="res://scenes/quests/story_quests/huayllay/2_combat/combat_components/runestones.tres" id="14_lqy8c"]
+[ext_resource type="PackedScene" uid="uid://fuhl3l6gxq5k" path="res://scenes/game_elements/props/collectible_item/collectible_item.tscn" id="15_i1y2i"]
+[ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/globals/game_state/inventory/inventory_item.gd" id="16_q0g68"]
+[ext_resource type="Resource" uid="uid://dlwrvvmjswh1c" path="res://scenes/quests/story_quests/huayllay/2_combat/combat_components/huayllay_combat.dialogue" id="17_7etgq"]
+[ext_resource type="PackedScene" uid="uid://dmevaymmt6wco" path="res://scenes/game_elements/props/powerup/powerup.tscn" id="17_xmsnp"]
+[ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="18_w6b72"]
+[ext_resource type="PackedScene" uid="uid://c0374lgarm8gj" path="res://scenes/game_elements/fx/clouds_shadow/clouds_shadow.tscn" id="19_7etgq"]
+[ext_resource type="Script" uid="uid://c8405c212rbn6" path="res://scenes/game_elements/props/background_music/components/background_music.gd" id="21_88slx"]
+[ext_resource type="AudioStream" uid="uid://cvw6fqeq2gxmq" path="res://scenes/quests/story_quests/huayllay/2_combat/combat_components/combat2_music.ogg" id="22_wnfxd"]
+[ext_resource type="SpriteFrames" uid="uid://b4pmxoo8o8e5o" path="res://scenes/quests/story_quests/huayllay/textures/huayllay_torch.tres" id="23_4u1ai"]
+[ext_resource type="Texture2D" uid="uid://dpxca3doaglwd" path="res://scenes/quests/story_quests/huayllay/1_stealth/stealth_components/luz.png" id="24_5rrlh"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_kbwgf"]
+height = 42.0
+
+[sub_resource type="Resource" id="Resource_lqy8c"]
+script = ExtResource("16_q0g68")
+metadata/_custom_type_script = "uid://bgmwplmj3bfls"
+
+[node name="HuayllayCombat" type="Node2D" unique_id=1610054737]
+modulate = Color(0.4839287, 0.4839287, 0.4839287, 1)
+self_modulate = Color(0.42357814, 0.42357814, 0.42357814, 1)
+y_sort_enabled = true
+
+[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=994302979]
+
+[node name="PlayerMode" type="Node" parent="." unique_id=969358735]
+script = ExtResource("1_aqd58")
+mode = 1
+metadata/_custom_type_script = "uid://pk3ucq7e2eah"
+
+[node name="Cinematic" type="Node2D" parent="." unique_id=1804874187]
+script = ExtResource("2_qeu44")
+dialogue = ExtResource("17_7etgq")
+metadata/_custom_type_script = "uid://x1mxt6bmei2o"
+
+[node name="FillGameLogic" type="Node" parent="." unique_id=1964770711]
+script = ExtResource("4_t6lua")
+metadata/_custom_type_script = "uid://cp54mgi54nywo"
+
+[node name="TileMapLayers" type="Node2D" parent="." unique_id=738016104]
+
+[node name="Grounds" type="TileMapLayer" parent="TileMapLayers" unique_id=1155872160]
+tile_map_data = PackedByteArray("AAAAAAIAAAABAAAAAAAAAAMAAAABAAAAAAAAAAQAAAABAAAAAAAAAAUAAAABAAAAAAAAAAYAAAABAAAAAAAAAAcAAAABAAAAAAAAAAgAAAABAAAAAAABAAIAAAABAAAAAAABAAMAAAABAAAAAAABAAQAAAABAAAAAAABAAUAAAABAAAAAAABAAYAAAABAAAAAAABAAcAAAABAAAAAAABAAgAAAABAAAAAAACAAIAAAABAAAAAAACAAMAAAABAAAAAAACAAQAAAABAAAAAAACAAUAAAABAAAAAAACAAYAAAABAAAAAAACAAcAAAABAAAAAAACAAgAAAABAAAAAAADAAIAAAABAAAAAAADAAMAAAABAAAAAAADAAQAAAABAAAAAAADAAUAAAABAAAAAAADAAYAAAABAAAAAAADAAcAAAABAAAAAAADAAgAAAABAAAAAAAEAAIAAAABAAAAAAAEAAMAAAABAAAAAAAEAAQAAAABAAAAAAAEAAUAAAABAAAAAAAEAAYAAAABAAAAAAAEAAcAAAABAAAAAAAEAAgAAAABAAAAAAAFAAIAAAABAAAAAAAFAAMAAAABAAAAAAAFAAQAAAABAAAAAAAFAAUAAAABAAAAAAAFAAYAAAABAAAAAAAFAAcAAAABAAAAAAAFAAgAAAABAAAAAAAGAAIAAAABAAAAAAAGAAMAAAABAAAAAAAGAAQAAAABAAAAAAAGAAUAAAABAAAAAAAGAAYAAAABAAAAAAAGAAcAAAABAAAAAAAGAAgAAAABAAAAAAAHAAIAAAABAAAAAAAHAAMAAAABAAAAAAAHAAQAAAABAAAAAAAHAAUAAAABAAAAAAAHAAYAAAABAAAAAAAHAAcAAAABAAAAAAAHAAgAAAABAAAAAAAIAAIAAAABAAAAAAAIAAMAAAABAAAAAAAIAAQAAAABAAAAAAAIAAUAAAABAAAAAAAIAAYAAAABAAAAAAAIAAcAAAABAAAAAAAIAAgAAAABAAAAAAAJAAIAAAABAAAAAAAJAAMAAAABAAAAAAAJAAQAAAABAAAAAAAJAAUAAAABAAAAAAAJAAYAAAABAAAAAAAJAAcAAAABAAAAAAAJAAgAAAABAAAAAAAKAAIAAAABAAAAAAAKAAMAAAABAAAAAAAKAAQAAAABAAAAAAAKAAUAAAABAAAAAAAKAAYAAAABAAAAAAAKAAcAAAABAAAAAAAKAAgAAAABAAAAAAALAAIAAAABAAAAAAALAAMAAAABAAAAAAALAAQAAAABAAAAAAALAAUAAAABAAAAAAALAAYAAAABAAAAAAALAAcAAAABAAAAAAALAAgAAAABAAAAAAAMAAIAAAABAAAAAAAMAAMAAAABAAAAAAAMAAQAAAABAAAAAAAMAAUAAAABAAAAAAAMAAYAAAABAAAAAAAMAAcAAAABAAAAAAAMAAgAAAABAAAAAAANAAIAAAABAAAAAAANAAMAAAABAAAAAAANAAQAAAABAAAAAAANAAUAAAABAAAAAAANAAYAAAABAAAAAAANAAcAAAABAAAAAAANAAgAAAABAAAAAAAOAAIAAAABAAAAAAAOAAMAAAABAAAAAAAOAAQAAAABAAAAAAAOAAUAAAABAAAAAAAOAAYAAAABAAAAAAAOAAcAAAABAAAAAAAOAAgAAAABAAAAAAD9/wQAAAABAAAAAAD9/wUAAAABAAAAAAD9/wYAAAABAAAAAAD+/wQAAAABAAAAAAD+/wUAAAABAAAAAAD+/wYAAAABAAAAAAD//wQAAAABAAAAAAD//wUAAAABAAAAAAD//wYAAAABAAAAAAA=")
+tile_set = ExtResource("5_ypm52")
+
+[node name="Walls" type="TileMapLayer" parent="TileMapLayers" unique_id=1109386869]
+modulate = Color(0.5609549, 0.5609549, 0.5609549, 1)
+tile_map_data = PackedByteArray("AAABAAAAAAABAAAAAAACAAAAAAABAAAAAAADAAAAAAABAAAAAAAEAAAAAAABAAAAAAAFAAAAAAABAAAAAAAGAAAAAAABAAAAAAAHAAAAAAABAAAAAAAIAAAAAAABAAAAAAAJAAAAAAABAAAAAAAKAAAAAAABAAAAAAALAAAAAAABAAAAAAAMAAAAAAABAAAAAAANAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAEAAAABAAAAAAABAAEAAAABAAAAAAACAAEAAAABAAAAAAADAAEAAAABAAAAAAAEAAEAAAABAAAAAAAFAAEAAAABAAAAAAAGAAEAAAABAAAAAAAHAAEAAAABAAAAAAAIAAEAAAABAAAAAAAJAAEAAAABAAAAAAAKAAEAAAABAAAAAAALAAEAAAABAAAAAAAMAAEAAAABAAAAAAANAAEAAAABAAAAAAANAAMAAAAAAAAAAAAOAAMAAAABAAAAAAAAAAIAAAACAAAAAAAAAAMAAAACAAAAAAD9/wIAAAABAAAAAAD9/wMAAAABAAAAAAD+/wIAAAABAAAAAAD+/wMAAAABAAAAAAD//wIAAAABAAAAAAD//wMAAAABAAAAAAA=")
+tile_set = ExtResource("8_5rrlh")
+
+[node name="Ceilings" type="TileMapLayer" parent="TileMapLayers" unique_id=1624874082]
+modulate = Color(0.18717611, 0.18717614, 0.18717608, 1)
+tile_map_data = PackedByteArray("AAAAAAAAAAACAAAAAAAAAAEAAAACAAAAAAAAAAcAAAACAAAAAAANAAAAAAAAAAAAAAANAAEAAAAAAAAAAAANAAIAAAAAAAAAAAAOAAAAAAABAAAAAAAOAAEAAAABAAAAAAAOAAIAAAABAAAAAAAOAAMAAAAAAAAAAAAOAAQAAAAAAAAAAAAOAAUAAAAAAAAAAAAOAAYAAAABAAAAAAANAAYAAAAAAAAAAAANAAcAAAAAAAAAAAAAAAgAAAABAAAAAAABAAgAAAABAAAAAAACAAgAAAABAAAAAAADAAgAAAABAAAAAAAEAAgAAAABAAAAAAAFAAgAAAABAAAAAAAGAAgAAAABAAAAAAAHAAgAAAABAAAAAAAIAAgAAAABAAAAAAAJAAgAAAABAAAAAAAKAAgAAAABAAAAAAALAAgAAAABAAAAAAAMAAgAAAABAAAAAAANAAgAAAABAAAAAAAOAAcAAAABAAAAAAAOAAgAAAABAAAAAAAAAAkAAAABAAAAAAAAAAoAAAABAAAAAAABAAkAAAABAAAAAAABAAoAAAABAAAAAAACAAkAAAABAAAAAAACAAoAAAABAAAAAAADAAkAAAABAAAAAAADAAoAAAABAAAAAAAEAAkAAAABAAAAAAAEAAoAAAABAAAAAAAFAAkAAAABAAAAAAAFAAoAAAABAAAAAAAGAAkAAAABAAAAAAAGAAoAAAABAAAAAAAHAAkAAAABAAAAAAAHAAoAAAABAAAAAAAIAAkAAAABAAAAAAAIAAoAAAABAAAAAAAJAAkAAAABAAAAAAAJAAoAAAABAAAAAAAKAAkAAAABAAAAAAAKAAoAAAABAAAAAAALAAkAAAABAAAAAAALAAoAAAABAAAAAAAMAAkAAAABAAAAAAAMAAoAAAABAAAAAAANAAkAAAABAAAAAAANAAoAAAABAAAAAAAOAAkAAAABAAAAAAAOAAoAAAABAAAAAAAPAP//AAABAAAAAAAPAAAAAAABAAAAAAAPAAEAAAABAAAAAAAPAAIAAAABAAAAAAAPAAMAAAABAAAAAAAPAAQAAAABAAAAAAAPAAUAAAABAAAAAAAPAAYAAAABAAAAAAAPAAcAAAABAAAAAAAPAAgAAAABAAAAAAAPAAkAAAABAAAAAAAPAAoAAAABAAAAAAAQAP//AAABAAAAAAAQAAAAAAABAAAAAAAQAAEAAAABAAAAAAAQAAIAAAABAAAAAAAQAAMAAAABAAAAAAAQAAQAAAABAAAAAAAQAAUAAAABAAAAAAAQAAYAAAABAAAAAAAQAAcAAAABAAAAAAAQAAgAAAABAAAAAAAQAAkAAAABAAAAAAAQAAoAAAABAAAAAAD+//7/AAABAAAAAAD+////AAABAAAAAAD///7/AAABAAAAAAD/////AAABAAAAAAAAAP7/AAABAAAAAAAAAP//AAABAAAAAAABAP7/AAABAAAAAAABAP//AAABAAAAAAACAP7/AAABAAAAAAACAP//AAABAAAAAAADAP7/AAABAAAAAAADAP//AAABAAAAAAAEAP7/AAABAAAAAAAEAP//AAABAAAAAAAFAP7/AAABAAAAAAAFAP//AAABAAAAAAAGAP7/AAABAAAAAAAGAP//AAABAAAAAAAHAP7/AAABAAAAAAAHAP//AAABAAAAAAAIAP7/AAABAAAAAAAIAP//AAABAAAAAAAJAP7/AAABAAAAAAAJAP//AAABAAAAAAAKAP7/AAABAAAAAAAKAP//AAABAAAAAAALAP7/AAABAAAAAAALAP//AAABAAAAAAAMAP7/AAABAAAAAAAMAP//AAABAAAAAAANAP7/AAABAAAAAAANAP//AAABAAAAAAAOAP7/AAABAAAAAAAOAP//AAABAAAAAAAPAP7/AAABAAAAAAAQAP7/AAABAAAAAAD+/wAAAAABAAAAAAD+/wEAAAABAAAAAAD+/wcAAAABAAAAAAD+/wgAAAABAAAAAAD+/wkAAAABAAAAAAD+/woAAAABAAAAAAD//wAAAAABAAAAAAD//wEAAAABAAAAAAD//wcAAAABAAAAAAD//wgAAAABAAAAAAD//wkAAAABAAAAAAD//woAAAABAAAAAAD9//7/AAABAAAAAAD9////AAABAAAAAAD9/wAAAAABAAAAAAD9/wEAAAABAAAAAAD9/wcAAAABAAAAAAD9/wgAAAABAAAAAAD9/wkAAAABAAAAAAD9/woAAAABAAAAAAD8/wEAAAABAAAAAAD8/wIAAAABAAAAAAD8/wMAAAABAAAAAAD8/wQAAAABAAAAAAD8/wUAAAABAAAAAAD8/wYAAAABAAAAAAD8/wcAAAABAAAAAAD8/wgAAAABAAAAAAD8/wkAAAABAAAAAAD8/woAAAABAAAAAAD7/wEAAAABAAAAAAD7/wIAAAABAAAAAAD7/wMAAAABAAAAAAD7/wQAAAABAAAAAAD7/wUAAAABAAAAAAD7/wYAAAABAAAAAAD7/wcAAAABAAAAAAD7/wgAAAABAAAAAAD7/wkAAAABAAAAAAD7/woAAAABAAAAAAD7//7/AAABAAAAAAD7////AAABAAAAAAD7/wAAAAABAAAAAAD8//7/AAABAAAAAAD8////AAABAAAAAAD8/wAAAAABAAAAAAA=")
+tile_set = ExtResource("9_jldpk")
+
+[node name="OnTheGround" type="Node2D" parent="." unique_id=410171371]
+y_sort_enabled = true
+
+[node name="Player" parent="OnTheGround" unique_id=1799818537 instance=ExtResource("8_88slx")]
+position = Vector2(309, 302)
+scale = Vector2(0.5, 0.5)
+sprite_frames = ExtResource("9_qeu44")
+
+[node name="WalkSound2" type="AudioStreamPlayer2D" parent="OnTheGround/Player" unique_id=581184621]
+unique_name_in_owner = true
+position = Vector2(6, 0)
+stream = ExtResource("10_318en")
+volume_db = -5.0
+pitch_scale = 7.0
+bus = &"SFX"
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="OnTheGround/Player" unique_id=231450039]
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_kbwgf")
+
+[node name="ThrowingNPC" parent="OnTheGround" unique_id=1243855514 instance=ExtResource("10_gut2u")]
+position = Vector2(857, 300)
+distance = 81.0
+throwing_period = 2.6
+sprite_frames = ExtResource("11_318en")
+projectile_scene = ExtResource("12_qeu44")
+projectile_speed = 50.0
+projectile_duration = 5.4
+
+[node name="Target" parent="OnTheGround" unique_id=1718603548 instance=ExtResource("13_kbwgf")]
+position = Vector2(507, 139)
+scale = Vector2(0.2, 0.2)
+sprite_frames = ExtResource("14_lqy8c")
+label = ""
+color = Color(1, 1, 1, 1)
+
+[node name="Target2" parent="OnTheGround" unique_id=711725062 instance=ExtResource("13_kbwgf")]
+position = Vector2(754, 140)
+scale = Vector2(0.2, 0.2)
+sprite_frames = ExtResource("14_lqy8c")
+label = ""
+color = Color(1, 1, 1, 1)
+
+[node name="Target3" parent="OnTheGround" unique_id=1832726000 instance=ExtResource("13_kbwgf")]
+position = Vector2(761, 455)
+scale = Vector2(0.2, 0.2)
+sprite_frames = ExtResource("14_lqy8c")
+label = ""
+color = Color(1, 1, 1, 1)
+
+[node name="Target4" parent="OnTheGround" unique_id=857122250 instance=ExtResource("13_kbwgf")]
+position = Vector2(636, 456)
+scale = Vector2(0.2, 0.2)
+sprite_frames = ExtResource("14_lqy8c")
+label = ""
+color = Color(1, 1, 1, 1)
+
+[node name="Target5" parent="OnTheGround" unique_id=1348280126 instance=ExtResource("13_kbwgf")]
+position = Vector2(628, 140)
+scale = Vector2(0.2, 0.2)
+sprite_frames = ExtResource("14_lqy8c")
+label = ""
+color = Color(1, 1, 1, 1)
+
+[node name="Target6" parent="OnTheGround" unique_id=1005497940 instance=ExtResource("13_kbwgf")]
+position = Vector2(511, 453)
+scale = Vector2(0.2, 0.2)
+sprite_frames = ExtResource("14_lqy8c")
+label = ""
+color = Color(1, 1, 1, 1)
+
+[node name="CollectibleItem2" parent="OnTheGround" unique_id=327991066 instance=ExtResource("15_i1y2i")]
+unique_name_in_owner = true
+position = Vector2(868, 303)
+revealed = false
+next_scene = "uid://b440j8uwbtk6o"
+item = SubResource("Resource_lqy8c")
+collected_dialogue = ExtResource("17_7etgq")
+dialogue_title = &"well_done"
+
+[node name="RepelPowerup" parent="OnTheGround" unique_id=1795462717 instance=ExtResource("17_xmsnp")]
+position = Vector2(114, 488)
+highlight_color = Color(0, 0.4392157, 1, 1)
+
+[node name="ScreenOverlay" type="CanvasLayer" parent="." unique_id=1277924950]
+
+[node name="HUD" parent="." unique_id=1216951978 instance=ExtResource("18_w6b72")]
+
+[node name="CloudsShadow" parent="." unique_id=1515275591 instance=ExtResource("19_7etgq")]
+scroll_offset = Vector2(39, -875)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=881414767]
+zoom = Vector2(1.333, 1.333)
+limit_left = 0
+limit_top = 0
+limit_right = 960
+limit_bottom = 640
+position_smoothing_enabled = true
+editor_draw_limits = true
+
+[node name="BackgroundMusic" type="Node" parent="." unique_id=1037925778]
+script = ExtResource("21_88slx")
+stream = ExtResource("22_wnfxd")
+metadata/_custom_type_script = "uid://c8405c212rbn6"
+
+[node name="Light" type="Node" parent="." unique_id=711405844]
+
+[node name="Luz" type="PointLight2D" parent="Light" unique_id=183430743]
+position = Vector2(136, 486)
+scale = Vector2(0.37584823, 1.3517133)
+color = Color(0.9490196, 0.7607843, 0.14509805, 0.78431374)
+energy = 5.0
+shadow_enabled = true
+texture = ExtResource("24_5rrlh")
+
+[node name="Luz2" type="PointLight2D" parent="Light" unique_id=1534567157]
+position = Vector2(415, 488.00003)
+scale = Vector2(0.37584823, 1.3517133)
+color = Color(0.9490196, 0.7607843, 0.14509805, 0.78431374)
+energy = 5.0
+shadow_enabled = true
+texture = ExtResource("24_5rrlh")
+
+[node name="Luz3" type="PointLight2D" parent="Light" unique_id=2037618781]
+position = Vector2(687, 494)
+scale = Vector2(0.37584823, 1.3517133)
+color = Color(0.9490196, 0.7607843, 0.14509805, 0.78431374)
+energy = 5.0
+shadow_enabled = true
+texture = ExtResource("24_5rrlh")
+
+[node name="Luz4" type="PointLight2D" parent="Light" unique_id=1845634440]
+position = Vector2(60.999996, 345)
+rotation = -1.5707964
+scale = Vector2(0.37584823, 0.70289)
+color = Color(0.9490196, 0.7607843, 0.14509805, 0.78431374)
+energy = 16.0
+shadow_enabled = true
+texture = ExtResource("24_5rrlh")
+
+[node name="Torch" type="Node" parent="." unique_id=919422161]
+
+[node name="Torch_1" type="Node2D" parent="Torch" unique_id=2142677145]
+position = Vector2(415, 64)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Torch/Torch_1" unique_id=1348771305]
+scale = Vector2(1.52, 1.52)
+sprite_frames = ExtResource("23_4u1ai")
+frame_progress = 0.4700515
+
+[node name="Torch_3" type="Node2D" parent="Torch" unique_id=1114323162]
+position = Vector2(687, 64)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Torch/Torch_3" unique_id=842917475]
+scale = Vector2(1.52, 1.52)
+sprite_frames = ExtResource("23_4u1ai")
+frame_progress = 0.4700515
+
+[node name="Torch_2" type="Node2D" parent="Torch" unique_id=1492582018]
+position = Vector2(130, 64)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Torch/Torch_2" unique_id=330764913]
+scale = Vector2(1.52, 1.52)
+sprite_frames = ExtResource("23_4u1ai")
+frame_progress = 0.4700515
+
+[connection signal="cinematic_finished" from="Cinematic" to="FillGameLogic" method="start"]
+[connection signal="goal_reached" from="FillGameLogic" to="OnTheGround/CollectibleItem2" method="reveal"]
