@@ -1,4 +1,4 @@
-[gd_scene format=4 uid="uid://l8l0xkeujwng"]
+[gd_scene format=4 uid="uid://dyriprpir8xhe"]
 
 [ext_resource type="Script" uid="uid://pk3ucq7e2eah" path="res://scenes/game_logic/player_mode.gd" id="1_aqd58"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="2_qeu44"]
