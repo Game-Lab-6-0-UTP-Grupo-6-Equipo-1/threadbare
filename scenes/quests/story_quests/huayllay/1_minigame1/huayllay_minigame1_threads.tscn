@@ -3,16 +3,12 @@
 [ext_resource type="Script" uid="uid://dnp0tjloec2d7" path="res://scenes/game_logic/stealth_game_logic.gd" id="1_wk3h6"]
 [ext_resource type="PackedScene" uid="uid://iu2q66clupc6" path="res://scenes/game_elements/characters/player/player.tscn" id="2_heq3r"]
 [ext_resource type="Script" uid="uid://csev4hv57utxv" path="res://scenes/game_logic/walk_behaviors/character_speeds.gd" id="3_1lduw"]
+[ext_resource type="SpriteFrames" uid="uid://dbg1igjqaoxnl" path="res://scenes/quests/story_quests/huayllay/player_components/huayllay_luis.tres" id="4_2i5k8"]
 [ext_resource type="PackedScene" uid="uid://d37mebu7atru7" path="res://scenes/game_elements/characters/enemies/guard/guard.tscn" id="4_amco0"]
-[ext_resource type="Texture2D" uid="uid://c0itxt8w3yml0" path="res://assets/first_party/templates/player/NO_EDIT_player_attack_01.png" id="4_jb4l6"]
 [ext_resource type="SpriteFrames" uid="uid://sedx54wvnihu" path="res://scenes/quests/story_quests/huayllay/1_minigame1/minigame1_components/huayllay_guard_enemy.tres" id="5_ktrnf"]
-[ext_resource type="Texture2D" uid="uid://covbt3em3ppm1" path="res://assets/first_party/templates/player/NO_EDIT_player_attack_02.png" id="5_s0ilb"]
 [ext_resource type="PackedScene" uid="uid://dua6mynlw2ptw" path="res://scenes/game_elements/props/checkpoint/checkpoint.tscn" id="6_hkpg4"]
-[ext_resource type="Texture2D" uid="uid://dly3ikrx05f0x" path="res://assets/first_party/templates/player/NO_EDIT_player_defeated.png" id="6_rrtj5"]
 [ext_resource type="Resource" uid="uid://bvm4bja0g64wn" path="res://scenes/quests/story_quests/huayllay/1_minigame1/minigame1_components/huayllay_checkpoint.dialogue" id="7_cq43m"]
-[ext_resource type="Texture2D" uid="uid://b0kexdddbmi7n" path="res://assets/first_party/templates/player/NO_EDIT_player_idle.png" id="7_eurk5"]
 [ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="8_lwpkh"]
-[ext_resource type="Texture2D" uid="uid://bnb6fdjs7xeaa" path="res://assets/first_party/templates/player/NO_EDIT_player_walk.png" id="8_qe5x3"]
 [ext_resource type="Texture2D" uid="uid://bk4w7fw4mg131" path="res://scenes/game_elements/props/checkpoint/components/Purple/Knitwitch_Appear.png" id="8_wnmlw"]
 [ext_resource type="Texture2D" uid="uid://cowpss4rhh4lo" path="res://scenes/game_elements/props/checkpoint/components/Purple/Knitwitch_Idle.png" id="9_cclfw"]
 [ext_resource type="Texture2D" uid="uid://b2kcu7e3bsp5k" path="res://scenes/quests/story_quests/huayllay/1_minigame1/minigame1_components/huayllay_luz_central.png" id="9_jb4l6"]
@@ -31,211 +27,6 @@
 [sub_resource type="Resource" id="Resource_cc7hk"]
 script = ExtResource("3_1lduw")
 metadata/_custom_type_script = "uid://csev4hv57utxv"
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_yg72c"]
-atlas = ExtResource("4_jb4l6")
-region = Rect2(0, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ydd7j"]
-atlas = ExtResource("4_jb4l6")
-region = Rect2(192, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_f8lfs"]
-atlas = ExtResource("4_jb4l6")
-region = Rect2(384, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_scyt1"]
-atlas = ExtResource("4_jb4l6")
-region = Rect2(576, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gjf71"]
-atlas = ExtResource("5_s0ilb")
-region = Rect2(0, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_eyp3i"]
-atlas = ExtResource("5_s0ilb")
-region = Rect2(192, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_nw7ra"]
-atlas = ExtResource("5_s0ilb")
-region = Rect2(384, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_3yb8r"]
-atlas = ExtResource("5_s0ilb")
-region = Rect2(576, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_cu6lk"]
-atlas = ExtResource("6_rrtj5")
-region = Rect2(0, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_icahe"]
-atlas = ExtResource("6_rrtj5")
-region = Rect2(192, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_gwwl8"]
-atlas = ExtResource("7_eurk5")
-region = Rect2(0, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_i6uyh"]
-atlas = ExtResource("7_eurk5")
-region = Rect2(192, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_0myta"]
-atlas = ExtResource("7_eurk5")
-region = Rect2(384, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_rbvnd"]
-atlas = ExtResource("7_eurk5")
-region = Rect2(192, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_l1iol"]
-atlas = ExtResource("7_eurk5")
-region = Rect2(0, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_28wor"]
-atlas = ExtResource("8_qe5x3")
-region = Rect2(0, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_7nl6p"]
-atlas = ExtResource("8_qe5x3")
-region = Rect2(192, 0, 192, 192)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ctslx"]
-atlas = ExtResource("8_qe5x3")
-region = Rect2(384, 0, 192, 192)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_j3yjp"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_yg72c")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ydd7j")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_f8lfs")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_scyt1")
-}],
-"loop": true,
-"name": &"attack_01",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gjf71")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_eyp3i")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_nw7ra")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_3yb8r")
-}],
-"loop": true,
-"name": &"attack_02",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cu6lk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_icahe")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cu6lk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_icahe")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cu6lk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_icahe")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cu6lk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_icahe")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cu6lk")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_icahe")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_cu6lk")
-}],
-"loop": true,
-"name": &"defeated",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gwwl8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gwwl8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_gwwl8")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_i6uyh")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0myta")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0myta")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_0myta")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_rbvnd")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_l1iol")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_l1iol")
-}],
-"loop": true,
-"name": &"idle",
-"speed": 10.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_28wor")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7nl6p")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ctslx")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_28wor")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_7nl6p")
-}, {
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_ctslx")
-}],
-"loop": true,
-"name": &"walk",
-"speed": 10.0
-}]
 
 [sub_resource type="Curve2D" id="Curve2D_8samn"]
 _data = {
@@ -432,13 +223,13 @@ script = ExtResource("1_wk3h6")
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=508226475]
 color = Color(0.07284262, 0.072842635, 0.072842605, 1)
 
-[node name="Player" parent="." unique_id=1079296690 instance=ExtResource("2_heq3r")]
+[node name="Player" parent="." unique_id=296354958 instance=ExtResource("2_heq3r")]
 visibility_layer = 32768
 position = Vector2(131, 463)
 speeds = SubResource("Resource_cc7hk")
-sprite_frames = SubResource("SpriteFrames_j3yjp")
+sprite_frames = ExtResource("4_2i5k8")
 
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1196891219]
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=773606221]
 process_mode = 3
 position = Vector2(-2, -17)
 zoom = Vector2(1.5, 1.5)
@@ -449,7 +240,7 @@ limit_bottom = 3250
 position_smoothing_enabled = true
 editor_draw_limits = true
 
-[node name="Luz" type="PointLight2D" parent="Player" unique_id=579941545]
+[node name="Luz" type="PointLight2D" parent="Player" unique_id=2084222829]
 position = Vector2(-1.0000076, -13.999996)
 scale = Vector2(0.36622605, 0.43254802)
 color = Color(0.99999803, 0.8277104, 0.33009687, 0.78431374)

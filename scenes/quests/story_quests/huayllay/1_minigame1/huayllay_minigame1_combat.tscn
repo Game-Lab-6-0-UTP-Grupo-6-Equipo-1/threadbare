@@ -7,8 +7,8 @@
 [ext_resource type="TileSet" uid="uid://72ej5wu5goh" path="res://scenes/quests/story_quests/huayllay/tiles/huayllay_cave_grounds.tres" id="5_ypm52"]
 [ext_resource type="TileSet" uid="uid://c7knenb6cvtee" path="res://scenes/quests/story_quests/huayllay/tiles/huayllay_cave_walls.tres" id="8_5rrlh"]
 [ext_resource type="PackedScene" uid="uid://iu2q66clupc6" path="res://scenes/game_elements/characters/player/player.tscn" id="8_88slx"]
+[ext_resource type="SpriteFrames" uid="uid://dbg1igjqaoxnl" path="res://scenes/quests/story_quests/huayllay/player_components/huayllay_luis.tres" id="9_aeve2"]
 [ext_resource type="TileSet" uid="uid://bjj3qjhxoxw0a" path="res://scenes/quests/story_quests/huayllay/tiles/huayllay_cave_ceilings.tres" id="9_jldpk"]
-[ext_resource type="SpriteFrames" uid="uid://cjei4chr6jl7u" path="res://scenes/quests/story_quests/huayllay/2_minigame2/luis_components/after_the_tremor_bryan.tres" id="9_qeu44"]
 [ext_resource type="AudioStream" uid="uid://cx6jv2cflrmqu" path="res://assets/third_party/sounds/characters/player/Foot.ogg" id="10_318en"]
 [ext_resource type="PackedScene" uid="uid://b82nsrh332syj" path="res://scenes/game_elements/characters/enemies/throwing_enemy/throwing_enemy.tscn" id="10_gut2u"]
 [ext_resource type="SpriteFrames" uid="uid://jnq3ufqsol6s" path="res://scenes/quests/story_quests/huayllay/1_minigame1/minigame1_components/huayllay_throwing_enemy.tres" id="11_318en"]
@@ -52,6 +52,7 @@ metadata/_custom_type_script = "uid://x1mxt6bmei2o"
 
 [node name="FillGameLogic" type="Node" parent="." unique_id=1964770711]
 script = ExtResource("4_t6lua")
+barrels_to_win = 2
 metadata/_custom_type_script = "uid://cp54mgi54nywo"
 
 [node name="TileMapLayers" type="Node2D" parent="." unique_id=738016104]
@@ -75,8 +76,7 @@ y_sort_enabled = true
 
 [node name="Player" parent="OnTheGround" unique_id=1799818537 instance=ExtResource("8_88slx")]
 position = Vector2(309, 302)
-scale = Vector2(0.5, 0.5)
-sprite_frames = ExtResource("9_qeu44")
+sprite_frames = ExtResource("9_aeve2")
 
 [node name="WalkSound2" type="AudioStreamPlayer2D" parent="OnTheGround/Player" unique_id=581184621]
 unique_name_in_owner = true

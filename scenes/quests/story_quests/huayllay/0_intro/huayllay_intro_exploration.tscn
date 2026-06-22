@@ -2,22 +2,11 @@
 
 [ext_resource type="TileSet" uid="uid://bpyv8qhmeyo6l" path="res://scenes/quests/story_quests/shjourney/3_shjourney_intro/tilesetIntro.tres" id="2_0vaf7"]
 [ext_resource type="Texture2D" uid="uid://cofkhv2328q4w" path="res://scenes/quests/story_quests/huayllay/textures/car.png" id="2_biwba"]
+[ext_resource type="SpriteFrames" uid="uid://dbg1igjqaoxnl" path="res://scenes/quests/story_quests/huayllay/player_components/huayllay_luis.tres" id="3_gtx0w"]
 [ext_resource type="Resource" uid="uid://oxficbyhbf2s" path="res://scenes/quests/story_quests/huayllay/0_intro/intro_components/huayllay_intro_exploration.dialogue" id="4_2awkw"]
-[ext_resource type="SpriteFrames" uid="uid://ckvi0pb0mnugd" path="res://scenes/quests/story_quests/huayllay/player_components/huayllay_player.tres" id="4_tigv4"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="5_nr1xt"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0vaf7"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_biwba")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_gtx0w"]
 animations = [{
 "frames": [{
 "duration": 1.0,
@@ -57,50 +46,26 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("OnTheGround/Character/Bus:position")
+tracks/2/path = NodePath("OnTheGround/Character:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0, -80)]
+"update": 1,
+"values": [false]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("OnTheGround/Character/Bus:visible")
+tracks/3/path = NodePath("OnTheGround/Bus_S:position")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("OnTheGround/Bus_S:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("OnTheGround/Character:visible")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
+"update": 0,
+"values": [Vector2(-155.99994, 260.00003)]
 }
 
 [sub_resource type="Animation" id="Animation_biwba"]
@@ -133,34 +98,10 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("OnTheGround/Character/Bus:visible")
+tracks/2/path = NodePath("OnTheGround/Character:visible")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("OnTheGround/Bus_S:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("OnTheGround/Character:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
@@ -197,42 +138,15 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("OnTheGround/Character/Bus:position")
+tracks/2/path = NodePath("OnTheGround/Bus_S:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
 "times": PackedFloat32Array(0, 3),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
-"values": [Vector2(0, -90), Vector2(0, -90)]
+"values": [Vector2(-155.99994, 260.00003), Vector2(317, 260)]
 }
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("OnTheGround/Character/Bus:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("OnTheGround/Bus_S:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-
-[sub_resource type="Animation" id="Animation_ii021"]
-resource_name = "off"
 
 [sub_resource type="Animation" id="Animation_0vaf7"]
 resource_name = "walk_off"
@@ -295,7 +209,6 @@ _data = {
 &"RESET": SubResource("Animation_o3l1h"),
 &"bus_off": SubResource("Animation_biwba"),
 &"bus_on": SubResource("Animation_rv67a"),
-&"off": SubResource("Animation_ii021"),
 &"walk_off": SubResource("Animation_0vaf7"),
 &"walk_on": SubResource("Animation_gtx0w")
 }
@@ -344,21 +257,16 @@ tile_set = ExtResource("2_0vaf7")
 y_sort_enabled = true
 
 [node name="Bus_S" type="AnimatedSprite2D" parent="OnTheGround" unique_id=907252827]
-visible = false
-position = Vector2(317.28, 260.215)
+position = Vector2(-155.99994, 260.00003)
 scale = Vector2(3.96, 3.96)
 sprite_frames = SubResource("SpriteFrames_0vaf7")
 
 [node name="Character" type="AnimatedSprite2D" parent="OnTheGround" unique_id=169229228]
+visible = false
 position = Vector2(-134, 344)
-sprite_frames = ExtResource("4_tigv4")
+sprite_frames = ExtResource("3_gtx0w")
 animation = &"idle"
 autoplay = "idle"
-
-[node name="Bus" type="AnimatedSprite2D" parent="OnTheGround/Character" unique_id=2112124292]
-position = Vector2(0, -80)
-scale = Vector2(3.96, 3.96)
-sprite_frames = SubResource("SpriteFrames_gtx0w")
 
 [node name="Camera2D" type="Camera2D" parent="OnTheGround/Character" unique_id=1064875179]
 position = Vector2(1.4933319, -9)

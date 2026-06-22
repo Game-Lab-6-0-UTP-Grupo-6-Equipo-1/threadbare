@@ -3,7 +3,7 @@
 [ext_resource type="TileSet" uid="uid://72ej5wu5goh" path="res://scenes/quests/story_quests/huayllay/tiles/huayllay_cave_grounds.tres" id="1_slfb0"]
 [ext_resource type="TileSet" uid="uid://c7knenb6cvtee" path="res://scenes/quests/story_quests/huayllay/tiles/huayllay_cave_walls.tres" id="2_14t8d"]
 [ext_resource type="TileSet" uid="uid://bjj3qjhxoxw0a" path="res://scenes/quests/story_quests/huayllay/tiles/huayllay_cave_ceilings.tres" id="3_6bhyn"]
-[ext_resource type="SpriteFrames" uid="uid://c4ge8p7eyk56r" path="res://scenes/quests/story_quests/huayllay/player_components/huayllay_player.tres" id="4_tigv4"]
+[ext_resource type="SpriteFrames" uid="uid://dbg1igjqaoxnl" path="res://scenes/quests/story_quests/huayllay/player_components/huayllay_luis.tres" id="4_f8alw"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="5_nr1xt"]
 [ext_resource type="Resource" uid="uid://cif6er103j0wb" path="res://scenes/quests/story_quests/huayllay/0_intro/intro_components/huayllay_intro_cave.dialogue" id="6_14t8d"]
 [ext_resource type="Texture2D" uid="uid://daf2ilk2ingia" path="res://scenes/quests/story_quests/el_ojo_revelador/0_intro/intro_components/luz.png" id="7_6bhyn"]
@@ -22,7 +22,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [&"defeated"]
+"values": [&"faint"]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -35,6 +35,21 @@ tracks/1/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Vector2(-139, 341)]
+}
+
+[sub_resource type="Animation" id="Animation_f8alw"]
+resource_name = "sleep"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OnTheGround/Character:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"faint"]
 }
 
 [sub_resource type="Animation" id="Animation_27lhj"]
@@ -50,7 +65,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0, 2),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [&"idle", &"defeated"]
+"values": [&"faint", &"idle"]
 }
 
 [sub_resource type="Animation" id="Animation_rv67a"]
@@ -168,6 +183,7 @@ tracks/1/keys = {
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xo7iv"]
 _data = {
 &"RESET": SubResource("Animation_o3l1h"),
+&"sleep": SubResource("Animation_f8alw"),
 &"wake_up": SubResource("Animation_27lhj"),
 &"walk_on": SubResource("Animation_rv67a"),
 &"walk_on_2": SubResource("Animation_14t8d"),
@@ -212,8 +228,8 @@ y_sort_enabled = true
 
 [node name="Character" type="AnimatedSprite2D" parent="OnTheGround" unique_id=169229228]
 position = Vector2(-139, 341)
-sprite_frames = ExtResource("4_tigv4")
-animation = &"defeated"
+sprite_frames = ExtResource("4_f8alw")
+animation = &"faint"
 autoplay = "idle"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="OnTheGround" unique_id=49807179]

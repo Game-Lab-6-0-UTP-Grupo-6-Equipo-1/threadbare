@@ -1,8 +1,8 @@
 [gd_scene format=4 uid="uid://bjtsyemowa3ja"]
 
+[ext_resource type="SpriteFrames" uid="uid://dbg1igjqaoxnl" path="res://scenes/quests/story_quests/huayllay/player_components/huayllay_luis.tres" id="2_st5c4"]
 [ext_resource type="TileSet" uid="uid://bpyv8qhmeyo6l" path="res://scenes/quests/story_quests/shjourney/3_shjourney_intro/tilesetIntro.tres" id="2_yplfv"]
 [ext_resource type="SpriteFrames" uid="uid://bpfnbr7ig4s5g" path="res://scenes/game_elements/characters/components/sprite_frames/elder.tres" id="3_5xgsy"]
-[ext_resource type="SpriteFrames" uid="uid://c4ge8p7eyk56r" path="res://scenes/quests/story_quests/huayllay/player_components/huayllay_player.tres" id="4_p5wc2"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="5_ocx3e"]
 [ext_resource type="Resource" uid="uid://ch0offauatmcj" path="res://scenes/quests/story_quests/huayllay/0_intro/intro_components/huayllay_intro_meeting.dialogue" id="5_st5c4"]
 
@@ -35,7 +35,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("OnTheGround/Anchancho:position")
+tracks/2/path = NodePath("Anchancho:position")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -51,7 +51,7 @@ length = 2.0333333
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("OnTheGround/Anchancho:position")
+tracks/0/path = NodePath("Anchancho:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -67,10 +67,10 @@ tracks/1/path = NodePath("OnTheGround/Character:animation")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0.5),
-"transitions": PackedFloat32Array(1),
+"times": PackedFloat32Array(0.5, 0.9),
+"transitions": PackedFloat32Array(1, 1),
 "update": 1,
-"values": [&"defeated"]
+"values": [&"defeated", &"faint"]
 }
 
 [sub_resource type="Animation" id="Animation_st5c4"]
@@ -209,10 +209,12 @@ tile_set = ExtResource("2_yplfv")
 y_sort_enabled = true
 
 [node name="Character" type="AnimatedSprite2D" parent="OnTheGround" unique_id=169229228]
+visibility_layer = 2
 position = Vector2(1510, 696)
-sprite_frames = ExtResource("4_p5wc2")
+sprite_frames = ExtResource("2_st5c4")
 animation = &"walk"
 autoplay = "idle"
+flip_h = true
 
 [node name="Camera2D" type="Camera2D" parent="OnTheGround/Character" unique_id=1064875179]
 position = Vector2(5, -21)
@@ -229,7 +231,7 @@ metadata/_edit_group_ = true
 root_node = NodePath("../..")
 libraries/ = SubResource("AnimationLibrary_xo7iv")
 
-[node name="Anchancho" type="AnimatedSprite2D" parent="OnTheGround" unique_id=1390543434]
+[node name="Anchancho" type="AnimatedSprite2D" parent="." unique_id=1390543434]
 position = Vector2(679, -132.99998)
 scale = Vector2(1.6, 1.6)
 sprite_frames = ExtResource("3_5xgsy")
