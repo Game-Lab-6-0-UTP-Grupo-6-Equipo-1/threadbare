@@ -2,6 +2,7 @@
 # SPDX-License-Identifier: MPL-2.0
 
 ~ start
+do animation_player.play(&"sleep")
 Narrador: "Luis recobra el conocimiento lentamente."
 Narrador: "Siente un dolor agudo en la cabeza y el suelo bajo él es de piedra fría y húmeda."
 Narrador: "Al abrir los ojos, la oscuridad casi lo asfixia."

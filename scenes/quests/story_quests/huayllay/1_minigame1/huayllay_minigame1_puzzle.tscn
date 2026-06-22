@@ -4,7 +4,7 @@
 [ext_resource type="TileSet" uid="uid://c7knenb6cvtee" path="res://scenes/quests/story_quests/huayllay/tiles/huayllay_cave_walls.tres" id="2_frxr5"]
 [ext_resource type="TileSet" uid="uid://bjj3qjhxoxw0a" path="res://scenes/quests/story_quests/huayllay/tiles/huayllay_cave_ceilings.tres" id="3_iykj0"]
 [ext_resource type="PackedScene" uid="uid://iu2q66clupc6" path="res://scenes/game_elements/characters/player/player.tscn" id="4_lr8oj"]
-[ext_resource type="SpriteFrames" uid="uid://c4ge8p7eyk56r" path="res://scenes/quests/story_quests/huayllay/player_components/huayllay_player.tres" id="5_3gkps"]
+[ext_resource type="SpriteFrames" uid="uid://dbg1igjqaoxnl" path="res://scenes/quests/story_quests/huayllay/player_components/huayllay_luis.tres" id="6_iykj0"]
 [ext_resource type="Texture2D" uid="uid://b2kcu7e3bsp5k" path="res://scenes/quests/story_quests/huayllay/1_minigame1/minigame1_components/huayllay_luz_central.png" id="6_oxj8y"]
 [ext_resource type="Script" uid="uid://c68oh8dtr21ti" path="res://scenes/game_logic/sequence_puzzle.gd" id="7_2urll"]
 [ext_resource type="PackedScene" uid="uid://b8sok264erfoc" path="res://scenes/game_elements/props/sequence_puzzle_object/sequence_puzzle_object.tscn" id="8_g6i4f"]
@@ -26,6 +26,7 @@
 [ext_resource type="Texture2D" uid="uid://dpxca3doaglwd" path="res://scenes/quests/story_quests/huayllay/1_minigame1/minigame1_components/huayllay_luz.png" id="25_aydtm"]
 [ext_resource type="Resource" uid="uid://cng6xhessnjnc" path="res://scenes/quests/story_quests/huayllay/1_minigame1/minigame1_components/huayllay_minigame1_puzzle.dialogue" id="25_frxr5"]
 [ext_resource type="SpriteFrames" uid="uid://b4pmxoo8o8e5o" path="res://scenes/quests/story_quests/huayllay/textures/huayllay_torch.tres" id="26_38noh"]
+[ext_resource type="AudioStream" uid="uid://bef5tlrmlrpdn" path="res://scenes/quests/story_quests/huayllay/music/cave_music.wav" id="27_frxr5"]
 
 [sub_resource type="Resource" id="Resource_ut3i6"]
 script = ExtResource("21_ysfke")
@@ -33,6 +34,11 @@ type = 2
 metadata/_custom_type_script = "uid://bgmwplmj3bfls"
 
 [node name="HuayllaySequencePuzzle" type="Node2D" unique_id=217609538]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1683914068]
+stream = ExtResource("27_frxr5")
+volume_db = -10.0
+autoplay = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=953307120]
 color = Color(0.07450981, 0.07450981, 0.07450981, 1)
@@ -56,20 +62,20 @@ tile_set = ExtResource("3_iykj0")
 [node name="OnTheGround" type="Node2D" parent="." unique_id=1358184019]
 y_sort_enabled = true
 
-[node name="Player" parent="OnTheGround" unique_id=747348360 instance=ExtResource("4_lr8oj")]
+[node name="Players" parent="OnTheGround" unique_id=747348360 instance=ExtResource("4_lr8oj")]
 position = Vector2(61, 324)
-sprite_frames = ExtResource("5_3gkps")
+sprite_frames = ExtResource("6_iykj0")
 
-[node name="Camera2D" type="Camera2D" parent="OnTheGround/Player" unique_id=1732237457]
+[node name="Camera2D" type="Camera2D" parent="OnTheGround/Players" unique_id=1732237457]
 zoom = Vector2(1.3, 1.3)
 limit_left = -30
-limit_top = -540
+limit_top = -670
 limit_right = 1320
 limit_bottom = 1180
 position_smoothing_enabled = true
 editor_draw_limits = true
 
-[node name="Luz" type="PointLight2D" parent="OnTheGround/Player" unique_id=1859460529]
+[node name="Luz" type="PointLight2D" parent="OnTheGround/Players" unique_id=1859460529]
 position = Vector2(-1.0000076, -13.999996)
 scale = Vector2(0.36622605, 0.43254802)
 color = Color(0.99999803, 0.8277104, 0.33009687, 0.78431374)
