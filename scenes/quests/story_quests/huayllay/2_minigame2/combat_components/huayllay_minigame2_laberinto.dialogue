@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: The Threadbare Authors
+# SPDX-License-Identifier: MPL-2.0
+~ start
+Narrador: "Los muros de este laberinto han devorado a muchos... ¿serás tú la excepción?"
+Narrador: "Cuidado con los guardias, porque ya no tendrán piedad. Ahora serán más veloces."
+Narrador: "Este es el último tramo antes del jefe final..."
+Luis: "No he llegado tan lejos para morir en la oscuridad... Debo avanzar"
+=> END
