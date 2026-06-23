@@ -4,14 +4,10 @@
 [ext_resource type="TileSet" uid="uid://cae54iogw2ef0" path="res://scenes/quests/story_quests/huayllay/tiles/huayllay_exterior_floors.tres" id="2_3sofs"]
 [ext_resource type="TileSet" uid="uid://chga6ivdbifrp" path="res://scenes/quests/story_quests/huayllay/tiles/huayllay_bridges.tres" id="3_3sofs"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="4_1gi1u"]
-[ext_resource type="TileSet" uid="uid://d0ni0u2vnuki6" path="res://scenes/quests/story_quests/huayllay/tiles/huayllay_elevation.tres" id="4_kka5d"]
 [ext_resource type="SpriteFrames" uid="uid://dbg1igjqaoxnl" path="res://scenes/quests/story_quests/huayllay/player_components/huayllay_luis.tres" id="5_1gi1u"]
 [ext_resource type="Resource" uid="uid://bwd45hwb3ej5" path="res://scenes/quests/story_quests/huayllay/4_outro/outro_components/huayllay_outro_win.dialogue" id="5_6s3ex"]
 [ext_resource type="SpriteFrames" uid="uid://dxrmerjyhbv7p" path="res://scenes/quests/story_quests/huayllay/2_minigame2/combat_components/huayllay_target_spriteframes.tres" id="6_1gi1u"]
-[ext_resource type="Script" uid="uid://bdhjixygupit1" path="res://scenes/game_elements/props/area_filler/area_filler.gd" id="6_d476n"]
-[ext_resource type="PackedScene" uid="uid://7873qa54birk" path="res://scenes/game_elements/props/tree/tree.tscn" id="7_6sst1"]
-[ext_resource type="SpriteFrames" uid="uid://2ek86nvw6y28" path="res://scenes/game_elements/props/tree/components/tree_spriteframes_yellow.tres" id="8_jc751"]
-[ext_resource type="SpriteFrames" uid="uid://d36eq8tqdaxdy" path="res://scenes/game_elements/props/tree/components/tree_spriteframes_green.tres" id="9_ojf4o"]
+[ext_resource type="Texture2D" uid="uid://dpxca3doaglwd" path="res://scenes/quests/story_quests/huayllay/1_minigame1/minigame1_components/huayllay_luz.png" id="8_j02o3"]
 
 [sub_resource type="Animation" id="Animation_1gi1u"]
 length = 0.001
@@ -103,9 +99,6 @@ _data = {
 &"walk_on_2": SubResource("Animation_d476n")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_3kd15"]
-size = Vector2(1205, 431)
-
 [node name="HuayllayOutro" type="Node2D" unique_id=1273842832]
 
 [node name="HUD" parent="." unique_id=260989644 instance=ExtResource("1_6s3ex")]
@@ -121,9 +114,6 @@ tile_set = ExtResource("2_3sofs")
 modulate = Color(0.48962224, 0.48962224, 0.48962218, 1)
 tile_map_data = PackedByteArray("AAAOAAgAAwAAAAIAAAAOAAcAAwAAAAIAAAAOAAYAAwAAAAIAAAAOAAUAAwAAAAIAAAAOAAQAAwAAAAIAAAAOAAMAAwAAAAIAAAAOAAIAAwAAAAIAAAAOAAEAAwAAAAIAAAAOAAAAAwAAAAIAAAANAAgAAwAAAAIAAAANAAcAAwAAAAIAAAANAAYAAwAAAAIAAAANAAUAAwAAAAIAAAANAAQAAwAAAAIAAAANAAMAAwAAAAIAAAANAAIAAwAAAAIAAAANAAEAAwAAAAIAAAANAAAAAwAAAAIAAAAMAAgAAwAAAAIAAAAMAAcAAwAAAAIAAAAMAAYAAwAAAAIAAAAMAAUAAwAAAAIAAAAMAAQAAwAAAAIAAAAMAAMAAwAAAAIAAAAMAAIAAwAAAAIAAAAMAAEAAwAAAAIAAAAMAAAAAwAAAAIAAAALAAgAAwAAAAIAAAALAAcAAwAAAAIAAAALAAYAAwAAAAIAAAALAAUAAwAAAAIAAAALAAQAAwAAAAIAAAALAAMAAwAAAAIAAAALAAIAAwAAAAIAAAALAAEAAwAAAAIAAAALAAAAAwAAAAIAAAAKAAgAAwAAAAIAAAAKAAcAAwAAAAIAAAAKAAYAAwAAAAIAAAAKAAUAAwAAAAIAAAAKAAQAAwAAAAIAAAAKAAMAAwAAAAIAAAAKAAIAAwAAAAIAAAAKAAEAAwAAAAIAAAAKAAAAAwAAAAIAAAAJAAgAAwAAAAIAAAAJAAcAAwAAAAIAAAAJAAYAAwAAAAIAAAAJAAUAAwAAAAIAAAAJAAQAAwAAAAIAAAAJAAMAAwAAAAIAAAAJAAIAAwAAAAIAAAAJAAEAAwAAAAIAAAAJAAAAAwAAAAIAAAAIAAgAAwAAAAIAAAAIAAcAAwAAAAIAAAAIAAYAAwAAAAIAAAAIAAUAAwAAAAIAAAAIAAQAAwAAAAIAAAAIAAMAAwAAAAIAAAAIAAIAAwAAAAIAAAAIAAEAAwAAAAIAAAAIAAAAAwAAAAIAAAAHAAgAAwAAAAIAAAAHAAcAAwAAAAIAAAAHAAYAAwAAAAIAAAAHAAUAAwAAAAIAAAAHAAQAAwAAAAIAAAAHAAMAAwAAAAIAAAAHAAIAAwAAAAIAAAAHAAEAAwAAAAIAAAAHAAAAAwAAAAIAAAAGAAgAAwAAAAIAAAAGAAcAAwAAAAIAAAAGAAYAAwAAAAIAAAAGAAUAAwAAAAIAAAAGAAQAAwAAAAIAAAAGAAMAAwAAAAIAAAAGAAIAAwAAAAIAAAAGAAEAAwAAAAIAAAAGAAAAAwAAAAIAAAAFAAgAAwAAAAIAAAAFAAcAAwAAAAIAAAAFAAYAAwAAAAIAAAAFAAUAAwAAAAIAAAAFAAQAAwAAAAIAAAAFAAMAAwAAAAIAAAAFAAIAAwAAAAIAAAAFAAEAAwAAAAIAAAAFAAAAAwAAAAIAAAAEAAgAAwAAAAIAAAAEAAcAAwAAAAIAAAAEAAYAAwAAAAIAAAAEAAUAAwAAAAIAAAAEAAQAAwAAAAIAAAAEAAMAAwAAAAIAAAAEAAIAAwAAAAIAAAAEAAEAAwAAAAIAAAAEAAAAAwAAAAIAAAADAAgAAwAAAAIAAAADAAcAAwAAAAIAAAADAAYAAwAAAAIAAAADAAUAAwAAAAIAAAADAAQAAwAAAAIAAAADAAMAAwAAAAIAAAADAAIAAwAAAAIAAAADAAEAAwAAAAIAAAADAAAAAwAAAAIAAAACAAgAAwAAAAIAAAACAAcAAwAAAAIAAAACAAYAAwAAAAIAAAACAAUAAwAAAAIAAAACAAQAAwAAAAIAAAACAAMAAwAAAAIAAAACAAIAAwAAAAIAAAACAAEAAwAAAAIAAAACAAAAAwAAAAIAAAABAAgAAwAAAAIAAAABAAcAAwAAAAIAAAABAAYAAwAAAAIAAAABAAUAAwAAAAIAAAABAAQAAwAAAAIAAAABAAMAAwAAAAIAAAABAAIAAwAAAAIAAAABAAEAAwAAAAIAAAABAAAAAwAAAAIAAAAAAAgAAwAAAAIAAAAAAAcAAwAAAAIAAAAAAAYAAwAAAAIAAAAAAAUAAwAAAAIAAAAAAAQAAwAAAAIAAAAAAAMAAwAAAAIAAAAAAAIAAwAAAAIAAAAAAAEAAwAAAAIAAAAAAAAAAwAAAAIAAAAAAP//AwAAAAIAAAABAP//AwAAAAIAAAACAP//AwAAAAIAAAADAP//AwAAAAIAAAAEAP//AwAAAAIAAAAFAP//AwAAAAIAAAAGAP//AwAAAAIAAAAHAP//AwAAAAIAAAAIAP//AwAAAAIAAAAJAP//AwAAAAIAAAAKAP//AwAAAAIAAAALAP//AwAAAAIAAAAMAP//AwAAAAIAAAANAP//AwAAAAIAAAAOAP//AwAAAAIAAAAPAP//AwAAAAIAAAAPAAAAAwAAAAIAAAAPAAEAAwAAAAIAAAAPAAIAAwAAAAIAAAAPAAMAAwAAAAIAAAAPAAQAAwAAAAIAAAAPAAUAAwAAAAIAAAAPAAYAAwAAAAIAAAAPAAcAAwAAAAIAAAAPAAgAAwAAAAIAAAD/////AwAAAAIAAAD//wAAAwAAAAIAAAD//wEAAwAAAAIAAAD//wIAAwAAAAIAAAD//wMAAwAAAAIAAAD//wQAAwAAAAIAAAD//wUAAwAAAAIAAAD//wYAAwAAAAIAAAD//wcAAwAAAAIAAAD//wgAAwAAAAIAAAA=")
 tile_set = ExtResource("3_3sofs")
-
-[node name="Walls" type="TileMapLayer" parent="TileMapLayers" unique_id=204433270]
-tile_set = ExtResource("4_kka5d")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1523556790]
 position = Vector2(153, 366)
@@ -161,38 +151,48 @@ animation_player = NodePath("../OnTheGround/AnimationPlayer")
 next_scene = "uid://cmacgl172uay2"
 metadata/_custom_type_script = "uid://x1mxt6bmei2o"
 
-[node name="Forest" type="StaticBody2D" parent="." unique_id=1541633486]
-editor_description = "This uses Threadbare's \"AreaFiller\" component to place trees randomly in a given area. Try adjusting the parameters on the AreaFiller node and press \"Refill\"."
-visible = false
-y_sort_enabled = true
-collision_layer = 16
-collision_mask = 0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Forest" unique_id=993919054]
-position = Vector2(468, 76)
-shape = SubResource("RectangleShape2D_3kd15")
-
-[node name="AreaFiller" type="Node" parent="Forest" unique_id=1967072165]
-script = ExtResource("6_d476n")
-scenes = Array[PackedScene]([ExtResource("7_6sst1")])
-sprite_frames = Array[SpriteFrames]([ExtResource("8_jc751"), ExtResource("9_ojf4o"), ExtResource("9_ojf4o"), ExtResource("9_ojf4o")])
-metadata/_custom_type_script = "uid://bdhjixygupit1"
-
-[node name="Tree" parent="Forest" unique_id=1182216860 instance=ExtResource("7_6sst1")]
-position = Vector2(-134.5, 29.312988)
-scale = Vector2(0.9436444, 1.0067108)
-
-[node name="Tree2" parent="Forest" unique_id=1029692172 instance=ExtResource("7_6sst1")]
-position = Vector2(-33.856163, 73.79311)
-scale = Vector2(1.113184, 1.1827277)
-
-[node name="Tree3" parent="Forest" unique_id=884474271 instance=ExtResource("7_6sst1")]
-position = Vector2(-98.66641, 142.2037)
-scale = Vector2(0.9079491, 0.89297915)
-
-[node name="Tree4" parent="Forest" unique_id=955509437 instance=ExtResource("7_6sst1")]
-position = Vector2(-32.555416, 154.65326)
-scale = Vector2(1.094416, 1.1684742)
-
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=486413914]
 color = Color(0.50140655, 0.5014065, 0.5014065, 1)
+
+[node name="Light" type="Node" parent="." unique_id=332681769]
+
+[node name="Luz" type="PointLight2D" parent="Light" unique_id=1061827913]
+position = Vector2(163, 313)
+scale = Vector2(0.37584823, 1.3517133)
+color = Color(0.9490196, 0.7607843, 0.14509805, 0.78431374)
+energy = 5.0
+shadow_enabled = true
+texture = ExtResource("8_j02o3")
+
+[node name="Luz2" type="PointLight2D" parent="Light" unique_id=1369565913]
+position = Vector2(413, 310.00003)
+scale = Vector2(0.37584823, 1.3517133)
+color = Color(0.9490196, 0.7607843, 0.14509805, 0.78431374)
+energy = 5.0
+shadow_enabled = true
+texture = ExtResource("8_j02o3")
+
+[node name="Luz3" type="PointLight2D" parent="Light" unique_id=729991983]
+position = Vector2(674, 310.00003)
+scale = Vector2(0.37584823, 1.3517133)
+color = Color(0.9490196, 0.7607843, 0.14509805, 0.78431374)
+energy = 5.0
+shadow_enabled = true
+texture = ExtResource("8_j02o3")
+
+[node name="Luz4" type="PointLight2D" parent="Light" unique_id=1509810058]
+position = Vector2(924, 310.00003)
+scale = Vector2(0.37584823, 1.3517133)
+color = Color(0.9490196, 0.7607843, 0.14509805, 0.78431374)
+energy = 5.0
+shadow_enabled = true
+texture = ExtResource("8_j02o3")
+
+[node name="Luz5" type="PointLight2D" parent="Light" unique_id=244189136]
+position = Vector2(890.00006, 276)
+rotation = 1.5707964
+scale = Vector2(0.37584823, 1.3517133)
+color = Color(0.9490196, 0.7607843, 0.14509805, 0.78431374)
+energy = 5.0
+shadow_enabled = true
+texture = ExtResource("8_j02o3")

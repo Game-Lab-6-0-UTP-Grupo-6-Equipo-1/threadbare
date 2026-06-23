@@ -13,14 +13,15 @@
 [ext_resource type="Texture2D" uid="uid://b2kcu7e3bsp5k" path="res://scenes/quests/story_quests/huayllay/1_minigame1/minigame1_components/huayllay_luz_central.png" id="9_syyod"]
 [ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/globals/game_state/inventory/inventory_item.gd" id="10_kxhf3"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="12_0qk4j"]
-[ext_resource type="Resource" uid="uid://cliwkwjgdrm0c" path="res://scenes/quests/story_quests/huayllay/1_minigame1/minigame1_components/huayllay_minigame1_threads.dialogue" id="13_dbieb"]
 [ext_resource type="TileSet" uid="uid://72ej5wu5goh" path="res://scenes/quests/story_quests/huayllay/tiles/huayllay_cave_grounds.tres" id="14_qbt3s"]
 [ext_resource type="TileSet" uid="uid://c7knenb6cvtee" path="res://scenes/quests/story_quests/huayllay/tiles/huayllay_cave_walls.tres" id="15_8va71"]
 [ext_resource type="Texture2D" uid="uid://dpujrhgnawbuc" path="res://scenes/quests/story_quests/huayllay/textures/laberinto.png" id="16_4kk86"]
 [ext_resource type="TileSet" uid="uid://bjj3qjhxoxw0a" path="res://scenes/quests/story_quests/huayllay/tiles/huayllay_cave_ceilings.tres" id="16_8va71"]
+[ext_resource type="Resource" uid="uid://dvkoedfhb33m1" path="res://scenes/quests/story_quests/huayllay/2_minigame2/combat_components/huayllay_minigame2_laberinto.dialogue" id="18_rp7pc"]
 [ext_resource type="AudioStream" uid="uid://bef5tlrmlrpdn" path="res://scenes/quests/story_quests/huayllay/music/cave_music.wav" id="19_nljhd"]
 [ext_resource type="Texture2D" uid="uid://dpxca3doaglwd" path="res://scenes/quests/story_quests/huayllay/1_minigame1/minigame1_components/huayllay_luz.png" id="20_i1ekg"]
 [ext_resource type="SpriteFrames" uid="uid://b4pmxoo8o8e5o" path="res://scenes/quests/story_quests/huayllay/textures/huayllay_torch.tres" id="21_cqqve"]
+[ext_resource type="PackedScene" uid="uid://c0374lgarm8gj" path="res://scenes/game_elements/fx/clouds_shadow/clouds_shadow.tscn" id="22_rp7pc"]
 
 [sub_resource type="Resource" id="Resource_6iypn"]
 script = ExtResource("3_syyod")
@@ -74,6 +75,7 @@ tile_set = ExtResource("16_8va71")
 
 [node name="Player" parent="." unique_id=1079296690 instance=ExtResource("2_e5873")]
 position = Vector2(104, 57)
+scale = Vector2(0.8, 0.8)
 speeds = SubResource("Resource_6iypn")
 sprite_frames = ExtResource("4_8y2vf")
 
@@ -129,12 +131,12 @@ debug_color = Color(0, 0, 0, 0.42)
 
 [node name="CollectibleItem" parent="." unique_id=1779229490 instance=ExtResource("9_e4m58")]
 position = Vector2(2732, 2338)
-next_scene = "uid://08fij1q8pjom"
+next_scene = "uid://x0y6ss34rsfu"
 item = SubResource("Resource_3o0wu")
 
 [node name="Cinematic" type="Node2D" parent="." unique_id=859706882]
 script = ExtResource("12_0qk4j")
-dialogue = ExtResource("13_dbieb")
+dialogue = ExtResource("18_rp7pc")
 next_scene = "uid://d4m7xwrv5hicq"
 metadata/_custom_type_script = "uid://x1mxt6bmei2o"
 
@@ -564,3 +566,6 @@ position = Vector2(1130.8445, 1684.5404)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Torch/Torch_7" unique_id=203413796]
 sprite_frames = ExtResource("21_cqqve")
+
+[node name="CloudsShadow" parent="." unique_id=1515275591 instance=ExtResource("22_rp7pc")]
+scroll_offset = Vector2(892, -61)

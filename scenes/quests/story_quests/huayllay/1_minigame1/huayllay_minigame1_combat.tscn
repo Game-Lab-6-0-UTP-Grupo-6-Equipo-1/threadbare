@@ -17,11 +17,9 @@
 [ext_resource type="SpriteFrames" uid="uid://br07bsrs7c811" path="res://scenes/quests/story_quests/huayllay/1_minigame1/minigame1_components/huayllay_runestones.tres" id="14_lqy8c"]
 [ext_resource type="PackedScene" uid="uid://fuhl3l6gxq5k" path="res://scenes/game_elements/props/collectible_item/collectible_item.tscn" id="15_i1y2i"]
 [ext_resource type="Script" uid="uid://bgmwplmj3bfls" path="res://scenes/globals/game_state/inventory/inventory_item.gd" id="16_q0g68"]
-[ext_resource type="Resource" uid="uid://dlwrvvmjswh1c" path="res://scenes/quests/story_quests/huayllay/2_minigame2/combat_components/huayllay_combat.dialogue" id="17_7etgq"]
 [ext_resource type="PackedScene" uid="uid://dmevaymmt6wco" path="res://scenes/game_elements/props/powerup/powerup.tscn" id="17_xmsnp"]
 [ext_resource type="PackedScene" uid="uid://cfcgrfvtn04yp" path="res://scenes/ui_elements/hud/hud.tscn" id="18_w6b72"]
 [ext_resource type="PackedScene" uid="uid://c0374lgarm8gj" path="res://scenes/game_elements/fx/clouds_shadow/clouds_shadow.tscn" id="19_7etgq"]
-[ext_resource type="Script" uid="uid://c8405c212rbn6" path="res://scenes/game_elements/props/background_music/components/background_music.gd" id="21_88slx"]
 [ext_resource type="AudioStream" uid="uid://cvw6fqeq2gxmq" path="res://scenes/quests/story_quests/huayllay/1_minigame1/minigame1_components/huayllay_minigame1_combat_music.ogg" id="22_wnfxd"]
 [ext_resource type="SpriteFrames" uid="uid://b4pmxoo8o8e5o" path="res://scenes/quests/story_quests/huayllay/textures/huayllay_torch.tres" id="23_4u1ai"]
 [ext_resource type="Texture2D" uid="uid://dpxca3doaglwd" path="res://scenes/quests/story_quests/huayllay/1_minigame1/minigame1_components/huayllay_luz.png" id="24_5rrlh"]
@@ -63,7 +61,7 @@ tile_set = ExtResource("5_ypm52")
 
 [node name="Walls" type="TileMapLayer" parent="TileMapLayers" unique_id=1109386869]
 modulate = Color(0.5609549, 0.5609549, 0.5609549, 1)
-tile_map_data = PackedByteArray("AAABAAAAAAABAAAAAAACAAAAAAABAAAAAAADAAAAAAABAAAAAAAEAAAAAAABAAAAAAAFAAAAAAABAAAAAAAGAAAAAAABAAAAAAAHAAAAAAABAAAAAAAIAAAAAAABAAAAAAAJAAAAAAABAAAAAAAKAAAAAAABAAAAAAALAAAAAAABAAAAAAAMAAAAAAABAAAAAAANAAAAAAABAAAAAAAAAAAAAAABAAAAAAAAAAEAAAABAAAAAAABAAEAAAABAAAAAAACAAEAAAABAAAAAAADAAEAAAABAAAAAAAEAAEAAAABAAAAAAAFAAEAAAABAAAAAAAGAAEAAAABAAAAAAAHAAEAAAABAAAAAAAIAAEAAAABAAAAAAAJAAEAAAABAAAAAAAKAAEAAAABAAAAAAALAAEAAAABAAAAAAAMAAEAAAABAAAAAAANAAEAAAABAAAAAAANAAMAAAAAAAAAAAAOAAMAAAABAAAAAAAAAAIAAAACAAAAAAAAAAMAAAACAAAAAAD9/wIAAAABAAAAAAD9/wMAAAABAAAAAAD+/wIAAAABAAAAAAD+/wMAAAABAAAAAAD//wIAAAABAAAAAAD//wMAAAABAAAAAAA=")
+tile_map_data = PackedByteArray("AAANAAMAAAAAAAAAAAAOAAMAAAABAAAAAAABAAAAAAABAAAAAAABAAEAAAABAAAAAAACAAAAAAABAAAAAAACAAEAAAABAAAAAAADAAAAAAABAAAAAAADAAEAAAABAAAAAAAEAAAAAAABAAAAAAAEAAEAAAABAAAAAAAFAAAAAAABAAAAAAAFAAEAAAABAAAAAAAGAAAAAAABAAAAAAAGAAEAAAABAAAAAAAHAAAAAAABAAAAAAAHAAEAAAABAAAAAAAIAAAAAAABAAAAAAAIAAEAAAABAAAAAAAJAAAAAAABAAAAAAAJAAEAAAABAAAAAAAKAAAAAAABAAAAAAAKAAEAAAABAAAAAAALAAAAAAABAAAAAAALAAEAAAABAAAAAAAMAAAAAAABAAAAAAAMAAEAAAABAAAAAAANAAAAAAABAAAAAAANAAEAAAABAAAAAAD9/wIAAAABAAAAAAD+/wIAAAABAAAAAAD//wMAAAABAAAAAAAAAAMAAAACAAAAAAD+/wMAAAABAAAAAAD9/wMAAAABAAAAAAD//wIAAAABAAAAAAAAAAIAAAACAAAAAAAAAAEAAAABAAAAAAAAAAAAAAABAAAAAAA=")
 tile_set = ExtResource("8_5rrlh")
 
 [node name="Ceilings" type="TileMapLayer" parent="TileMapLayers" unique_id=1624874082]
@@ -147,7 +145,6 @@ position = Vector2(868, 303)
 revealed = false
 next_scene = "uid://b440j8uwbtk6o"
 item = SubResource("Resource_lqy8c")
-collected_dialogue = ExtResource("17_7etgq")
 dialogue_title = &"well_done"
 
 [node name="RepelPowerup" parent="OnTheGround" unique_id=1795462717 instance=ExtResource("17_xmsnp")]
@@ -170,10 +167,10 @@ limit_bottom = 640
 position_smoothing_enabled = true
 editor_draw_limits = true
 
-[node name="BackgroundMusic" type="Node" parent="." unique_id=1037925778]
-script = ExtResource("21_88slx")
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1387101311]
 stream = ExtResource("22_wnfxd")
-metadata/_custom_type_script = "uid://c8405c212rbn6"
+volume_db = -11.42
+autoplay = true
 
 [node name="Light" type="Node" parent="." unique_id=711405844]
 

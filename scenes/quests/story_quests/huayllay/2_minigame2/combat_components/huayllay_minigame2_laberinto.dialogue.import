@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://dvkoedfhb33m1"
+path="res://.godot/imported/huayllay_minigame2_laberinto.dialogue-7da1d7397d33e4999d0e77fe457821de.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/huayllay/2_minigame2/combat_components/huayllay_minigame2_laberinto.dialogue"
+dest_files=["res://.godot/imported/huayllay_minigame2_laberinto.dialogue-7da1d7397d33e4999d0e77fe457821de.tres"]
+
+[params]
+
+defaults=true
