@@ -7,5 +7,5 @@ script = ExtResource("1_fyjuo")
 title = "Huayllay"
 description = "El juego transcurre en los alrededores del Bosque de Piedras de Huayllay (Cerro de Pasco), a más de 4,000 metros sobre el nivel del mar. El clima es gélido, el paisaje es imponente y las formaciones rocosas parecen cobrar vida de noche. Es ahí donde Luis, quien solo queria disfrutar de unos días en Pasco, es secuestrado por el Anchancho. Debido a eso, Luis deberá pasar por diversos retos para conseguir su libertad.gg"
 authors = Array[String](["Cristina Gonzales", "Fabricio Smith Garcia", "Maria Gracia Magallanes", "Josue"])
-first_scene = "uid://fdo1osfakxxo"
+first_scene = "uid://dq6eknu1b2xj1"
 metadata/_custom_type_script = "uid://dts1hwdy3phin"
