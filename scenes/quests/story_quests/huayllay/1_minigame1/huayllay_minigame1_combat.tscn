@@ -98,42 +98,14 @@ projectile_speed = 50.0
 projectile_duration = 5.4
 
 [node name="Target" parent="OnTheGround" unique_id=1718603548 instance=ExtResource("13_kbwgf")]
-position = Vector2(507, 139)
+position = Vector2(439, 139)
 scale = Vector2(0.2, 0.2)
 sprite_frames = ExtResource("14_lqy8c")
 label = ""
 color = Color(1, 1, 1, 1)
 
 [node name="Target2" parent="OnTheGround" unique_id=711725062 instance=ExtResource("13_kbwgf")]
-position = Vector2(754, 140)
-scale = Vector2(0.2, 0.2)
-sprite_frames = ExtResource("14_lqy8c")
-label = ""
-color = Color(1, 1, 1, 1)
-
-[node name="Target3" parent="OnTheGround" unique_id=1832726000 instance=ExtResource("13_kbwgf")]
-position = Vector2(761, 455)
-scale = Vector2(0.2, 0.2)
-sprite_frames = ExtResource("14_lqy8c")
-label = ""
-color = Color(1, 1, 1, 1)
-
-[node name="Target4" parent="OnTheGround" unique_id=857122250 instance=ExtResource("13_kbwgf")]
-position = Vector2(636, 456)
-scale = Vector2(0.2, 0.2)
-sprite_frames = ExtResource("14_lqy8c")
-label = ""
-color = Color(1, 1, 1, 1)
-
-[node name="Target5" parent="OnTheGround" unique_id=1348280126 instance=ExtResource("13_kbwgf")]
-position = Vector2(628, 140)
-scale = Vector2(0.2, 0.2)
-sprite_frames = ExtResource("14_lqy8c")
-label = ""
-color = Color(1, 1, 1, 1)
-
-[node name="Target6" parent="OnTheGround" unique_id=1005497940 instance=ExtResource("13_kbwgf")]
-position = Vector2(511, 453)
+position = Vector2(439, 454.99997)
 scale = Vector2(0.2, 0.2)
 sprite_frames = ExtResource("14_lqy8c")
 label = ""

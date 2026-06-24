@@ -1,0 +1,51 @@
+[gd_resource type="SpriteFrames" format=3 uid="uid://bwi64asg8nw3d"]
+
+[ext_resource type="Texture2D" uid="uid://dvnasejpqfe7h" path="res://scenes/quests/story_quests/huayllay/textures/huayllay_runas.png" id="1_ahego"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ahego"]
+atlas = ExtResource("1_ahego")
+region = Rect2(0, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4mqm4"]
+atlas = ExtResource("1_ahego")
+region = Rect2(0, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g6dak"]
+atlas = ExtResource("1_ahego")
+region = Rect2(128, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_swrin"]
+atlas = ExtResource("1_ahego")
+region = Rect2(256, 256, 128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1a2go"]
+atlas = ExtResource("1_ahego")
+region = Rect2(128, 256, 128, 128)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ahego")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4mqm4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g6dak")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_swrin")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1a2go")
+}],
+"loop": false,
+"name": &"struck",
+"speed": 5.0
+}]
