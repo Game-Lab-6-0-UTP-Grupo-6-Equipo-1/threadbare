@@ -1,11 +1,14 @@
 [gd_resource type="Resource" script_class="Quest" format=3 uid="uid://dqydt327khmus"]
 
 [ext_resource type="Script" uid="uid://dts1hwdy3phin" path="res://scenes/menus/storybook/components/quest.gd" id="1_fyjuo"]
+[ext_resource type="SpriteFrames" uid="uid://dbg1igjqaoxnl" path="res://scenes/quests/story_quests/huayllay/player_components/huayllay_luis.tres" id="2_j8hrt"]
 
 [resource]
 script = ExtResource("1_fyjuo")
 title = "Huayllay"
 description = "El juego transcurre en los alrededores del Bosque de Piedras de Huayllay (Cerro de Pasco), a más de 4,000 metros sobre el nivel del mar. El clima es gélido, el paisaje es imponente y las formaciones rocosas parecen cobrar vida de noche. Es ahí donde Luis, quien solo queria disfrutar de unos días en Pasco, es secuestrado por el Anchancho. Debido a eso, Luis deberá pasar por diversos retos para conseguir su libertad.gg"
 authors = Array[String](["Cristina Gonzales", "Fabricio Smith Garcia", "Maria Gracia Magallanes", "Josue"])
+affiliation = "UTP"
 first_scene = "uid://dq6eknu1b2xj1"
+sprite_frames = ExtResource("2_j8hrt")
 metadata/_custom_type_script = "uid://dts1hwdy3phin"
