@@ -71,7 +71,3 @@ func _on_barrel_completed() -> void:
 	get_tree().call_group("throwing_enemy", "remove")
 	get_tree().call_group("projectiles", "remove")
 	goal_reached.emit()
-
-
-func _on_cinematic_cinematic_finished() -> void:
-	pass # Replace with function body.
