@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://kni2yl26matc" path="res://scenes/game_elements/characters/player/components/player_repel.gd" id="1_y1fpu"]
 [ext_resource type="Texture2D" uid="uid://dda0lxfswrncy" path="res://scenes/game_elements/characters/player/components/blow.png" id="2_ochor"]
-[ext_resource type="AudioStream" uid="uid://crfylo055wa8e" path="res://scenes/game_elements/characters/player/components/blow.wav" id="3_bvany"]
+[ext_resource type="AudioStream" uid="uid://b7fbunqu1avq4" path="res://scenes/quests/story_quests/huayllay/player_components/huayllay_ataque1_sonido.wav" id="3_y1fpu"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h17s1"]
 radius = 20.0
@@ -146,9 +146,9 @@ tracks/5/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("3_bvany")
+"stream": ExtResource("3_y1fpu")
 }],
-"times": PackedFloat32Array(0.3)
+"times": PackedFloat32Array(0.03333333)
 }
 tracks/5/use_blend = true
 

@@ -2,6 +2,7 @@
 # SPDX-License-Identifier: MPL-2.0
 ~ start
 Narrador: "Guardias custodian los pasillos de esta sección."
-Narrador: "Evita su línea de visión, explora los rincones y encuentra la runa correcta para avanzar"
+Narrador: "Evita su línea de visión, explora los rincones, encuentra todas las cartas..."
+Narrador: "De esa manera podrás salir..."
 Luis: "Debo seguir..."
 => END

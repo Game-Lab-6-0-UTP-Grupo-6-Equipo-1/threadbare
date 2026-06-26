@@ -1,0 +1,16 @@
+# SPDX-FileCopyrightText: The Threadbare Authors
+# SPDX-License-Identifier: MPL-2.0
+
+~ start
+Narrador: "Has llegado al final del camino. En la choza te espera el mismísimo Anchancho."
+Narrador: "Todo depende de ti para que te libres de la maldición."
+Narrador: "Enfoca sus propios proyectiles hacia las rocas para completar las runas malditas y quebrar su poder."
+Luis: "¡Es ahora o nunca!"
+=> END
+
+~ well_done
+Luis: "Se acabó... Ya no me siento tan pesado."
+Luis: "Parece que funcionó."
+Narrador: "Con un último eco desgarrador, el espíritu del Anchancho fue derrotado..."
+Narrador: "Has triunfado."
+=> END

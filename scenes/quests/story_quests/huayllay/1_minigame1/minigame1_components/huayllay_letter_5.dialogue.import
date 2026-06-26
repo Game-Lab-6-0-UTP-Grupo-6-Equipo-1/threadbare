@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://cvvnr5rcqi3d"
+path="res://.godot/imported/huayllay_letter_5.dialogue-9e5e9a20e63ed5a23f9d3fb8e7f4e76d.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/huayllay/1_minigame1/minigame1_components/huayllay_letter_5.dialogue"
+dest_files=["res://.godot/imported/huayllay_letter_5.dialogue-9e5e9a20e63ed5a23f9d3fb8e7f4e76d.tres"]
+
+[params]
+
+defaults=true
