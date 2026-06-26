@@ -9,9 +9,9 @@
 [ext_resource type="Script" uid="uid://qro4uo83ba8f" path="res://scenes/game_elements/characters/player/components/player_sprite.gd" id="3_qlg0r"]
 [ext_resource type="Script" uid="uid://necvar42rnih" path="res://scenes/game_elements/props/character_sight/character_sight.gd" id="6_3in67"]
 [ext_resource type="Script" uid="uid://e78f8iq448e1" path="res://scenes/game_elements/characters/player/components/animation_player.gd" id="7_0owmy"]
-[ext_resource type="AudioStream" uid="uid://cx6jv2cflrmqu" path="res://assets/third_party/sounds/characters/player/Foot.ogg" id="11_blfj0"]
 [ext_resource type="Texture2D" uid="uid://dxaq5piwxqnht" path="res://scenes/game_elements/characters/player/components/dust.png" id="12_3in67"]
 [ext_resource type="PackedScene" uid="uid://cl06pid826dtg" path="res://scenes/game_elements/characters/player/components/player_repel.tscn" id="12_tnibl"]
+[ext_resource type="AudioStream" uid="uid://csgcx1aqjuy7p" path="res://scenes/quests/story_quests/huayllay/player_components/huayllay_ataque2_sonido.wav" id="13_4nivu"]
 [ext_resource type="PackedScene" uid="uid://b3111eergq5yg" path="res://scenes/game_elements/characters/player/components/player_hook.tscn" id="13_ecbbk"]
 [ext_resource type="Script" uid="uid://bk52qjv58locq" path="res://scenes/game_logic/light2d_behaviors/artificial_light_behavior.gd" id="16_ecbbk"]
 [ext_resource type="Texture2D" uid="uid://b5ooaiyxdrp6a" path="res://scenes/game_elements/components/light_texture_256x256.tres" id="16_tnibl"]
@@ -255,6 +255,21 @@ tracks/1/keys = {
 "update": 0,
 "values": [0, 1, 2, 3, 3]
 }
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("WalkSound")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("13_4nivu")
+}],
+"times": PackedFloat32Array(0)
+}
+tracks/2/use_blend = true
 
 [sub_resource type="Animation" id="Animation_qek5x"]
 resource_name = "walk"
@@ -436,7 +451,6 @@ script = ExtResource("7_0owmy")
 
 [node name="WalkSound" type="AudioStreamPlayer2D" parent="." unique_id=1454454549]
 unique_name_in_owner = true
-stream = ExtResource("11_blfj0")
 volume_db = -5.0
 pitch_scale = 7.0
 bus = &"SFX"

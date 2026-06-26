@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=15
+type="Resource"
+uid="uid://bcssguysck5m4"
+path="res://.godot/imported/huayllay_minigame3_final.dialogue-63314649ebc2e2b5cf5967bcb28bc777.tres"
+
+[deps]
+
+source_file="res://scenes/quests/story_quests/huayllay/3_minigame3/huayllay_minigame3_final.dialogue"
+dest_files=["res://.godot/imported/huayllay_minigame3_final.dialogue-63314649ebc2e2b5cf5967bcb28bc777.tres"]
+
+[params]
+
+defaults=true

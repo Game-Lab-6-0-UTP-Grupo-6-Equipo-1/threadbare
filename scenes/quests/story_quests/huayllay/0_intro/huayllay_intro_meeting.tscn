@@ -1,10 +1,12 @@
 [gd_scene format=4 uid="uid://bjtsyemowa3ja"]
 
 [ext_resource type="SpriteFrames" uid="uid://dbg1igjqaoxnl" path="res://scenes/quests/story_quests/huayllay/player_components/huayllay_luis.tres" id="2_st5c4"]
+[ext_resource type="TileSet" uid="uid://ij7nbyu7hpum" path="res://scenes/quests/story_quests/huayllay/tiles/huayllay_shadows.tres" id="2_wcxhj"]
 [ext_resource type="TileSet" uid="uid://bpyv8qhmeyo6l" path="res://scenes/quests/story_quests/shjourney/3_shjourney_intro/tilesetIntro.tres" id="2_yplfv"]
 [ext_resource type="SpriteFrames" uid="uid://bpfnbr7ig4s5g" path="res://scenes/game_elements/characters/components/sprite_frames/elder.tres" id="3_5xgsy"]
 [ext_resource type="Script" uid="uid://x1mxt6bmei2o" path="res://scenes/ui_elements/cinematic/cinematic.gd" id="5_ocx3e"]
 [ext_resource type="Resource" uid="uid://ch0offauatmcj" path="res://scenes/quests/story_quests/huayllay/0_intro/intro_components/huayllay_intro_meeting.dialogue" id="5_st5c4"]
+[ext_resource type="Texture2D" uid="uid://b2kcu7e3bsp5k" path="res://scenes/quests/story_quests/huayllay/1_minigame1/minigame1_components/huayllay_luz_central.png" id="6_m8v7q"]
 
 [sub_resource type="Animation" id="Animation_o3l1h"]
 length = 0.001
@@ -169,7 +171,7 @@ _data = {
 [node name="HuayllayIntro" type="Node2D" unique_id=2049284984]
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=2041276557]
-color = Color(1, 0.76862746, 0.6627451, 1)
+color = Color(0.4423703, 0.3201755, 0.26059705, 1)
 
 [node name="TileMapLayers" type="Node2D" parent="." unique_id=591504591]
 position = Vector2(936, 0)
@@ -183,7 +185,7 @@ tile_map_data = PackedByteArray("AAAKAAoABgACAAEAAAAJAAoABgABAAEAAAAIAAoABgABAAE
 tile_set = ExtResource("2_yplfv")
 
 [node name="Grass" type="TileMapLayer" parent="TileMapLayers" unique_id=161477781]
-tile_map_data = PackedByteArray("AAD1/wkAEgABAAEAAAD1/woAEgABAAIAAAD2/woAEgABAAEAAAD3/woAEgABAAEAAAD3/wkAEgABAAAAAAD2/wkAEgABAAAAAAD0/wgAEgAAAAAAAAD4/wgAEgADAAAAAAD1/wgAEgACAAAAAAD4/wkAEgACAAEAAAD4/woAEgACAAEAAAD4/wsAEgACAAIAAAD3/wsAEgABAAIAAAD2/wsAEgAAAAIAAAD0/woAEgAAAAIAAAD0/wkAEgAAAAEAAAD8/wkAEgADAAMAAAD3/wIAEgADAAMAAAAGAAEAEgADAAMAAAAKAAYAEgADAAMAAAAMAAIAEgADAAAAAAAMAAMAEgADAAEAAAAMAAQAEgADAAEAAAAMAAUAEgADAAIAAADw/wIAEgAAAAAAAADx/wIAEgACAAAAAADw/wMAEgAAAAIAAADx/wMAEgABAAIAAADy/wMAEgABAAMAAADz/wMAEgACAAAAAADz/wQAEgADAAIAAAA=")
+tile_map_data = PackedByteArray("AAD1/wkAEgABAAEAAAD1/woAEgABAAIAAAD2/woAEgABAAEAAAD3/woAEgABAAEAAAD3/wkAEgABAAAAAAD2/wkAEgABAAAAAAD0/wgAEgAAAAAAAAD4/wgAEgADAAAAAAD1/wgAEgACAAAAAAD4/wkAEgACAAEAAAD4/woAEgACAAEAAAD4/wsAEgACAAIAAAD3/wsAEgABAAIAAAD2/wsAEgAAAAIAAAD0/woAEgAAAAIAAAD0/wkAEgAAAAEAAAD8/wkAEgADAAMAAAD3/wIAEgADAAMAAAAGAAEAEgADAAMAAAAKAAYAEgADAAMAAAAMAAIAEgADAAAAAAAMAAMAEgADAAEAAAAMAAQAEgADAAEAAAAMAAUAEgADAAIAAADw/wIAEgAAAAAAAADx/wIAEgACAAAAAADw/wMAEgAAAAIAAADx/wMAEgABAAIAAADy/wMAEgABAAMAAADz/wMAEgACAAAAAADz/wQAEgADAAIAAAD6/wIAFwABAAUAAAABAP//FwABAAUAAAABAAYAFwABAAUAAAAGAAMAFwABAAUAAAACAAkAFwABAAUAAAD6/wkAFwABAAUAAAD1/wEAFwABAAUAAAD0/wUAFwABAAUAAAAGAP3/FwABAAUAAAAIAAAAFwABAAUAAAAKAAcAFwABAAUAAAANAAQAFwABAAUAAADz/wYAFwADAAAAAAD0/wAAFwADAAAAAAD5/wIAFwADAAAAAAD8/wQAFwADAAAAAAD/////FwADAAAAAAD+/wIAFwADAAAAAAADAAMAFwADAAAAAAAFAAUAFwADAAAAAAAAAAoAFwADAAAAAAD7/wgAFwADAAAAAAACAAcAFwADAAAAAAALAAgAFwADAAAAAAAJAAQAFwADAAAAAAAIAP7/FwADAAAAAAAFAAEAFwADAAAAAAAAAP3/FwADAAAAAAACAPv/FwADAAAAAAD2//v/FwADAAAAAAA=")
 tile_set = ExtResource("2_yplfv")
 
 [node name="Rocks_1" type="TileMapLayer" parent="TileMapLayers" unique_id=693738381]
@@ -198,11 +200,19 @@ tile_set = ExtResource("2_yplfv")
 tile_set = ExtResource("2_yplfv")
 
 [node name="Trees" type="TileMapLayer" parent="TileMapLayers" unique_id=386159278]
-tile_map_data = PackedByteArray("AAAKAAIAIwAAAAAAAAD2/wgAIwAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAKAAIAIwAAAAAAAAD2/wgAIwAAAAAAAAADAP7/IwAAAAAAAAD2//7/IwAAAAAAAAD4//r/IwAAAAAAAAAAAPr/IwAAAAAAAADw//3/IwAAAAAAAADz//v/IwAAAAAAAAAFAPr/IwAAAAAAAAAKAPr/IwAAAAAAAAA=")
 tile_set = ExtResource("2_yplfv")
 
 [node name="Water" type="TileMapLayer" parent="TileMapLayers" unique_id=192290927]
 tile_map_data = PackedByteArray("AAD6/wYAAAAAAAAAAAD5/wYAAAAAAAAAAAD4/wYAAAAAAAAAAAD4/wUAAAAAAAAAAAD3/wUAAAAAAAAAAAD3/wQAAAAAAAAAAAD4/wQAAAAAAAAAAAD5/wQAAAAAAAAAAAD5/wUAAAAAAAAAAAD6/wUAAAAAAAAAAAD6/wQAAAAAAAAAAAD5/wMAAAAAAAAAAAD7/wUAAAAAAAAAAAA=")
+tile_set = ExtResource("2_yplfv")
+
+[node name="Shadow" type="TileMapLayer" parent="TileMapLayers" unique_id=455768315]
+tile_map_data = PackedByteArray("AADy/wAAAAAAAAAAAADz/wAAAAAAAAAAAADz/wIAAAAAAAAAAAD0/wIAAAAAAAAAAAD1/wMAAAAAAAAAAAD8/wgAAAAAAAAAAAD9/wcAAAAAAAAAAAD+/wgAAAAAAAAAAAD9/wUAAAAAAAAAAAD+/wYAAAAAAAAAAAAMAAsAAAAAAAAAAAANAAsAAAAAAAAAAAAOAAsAAAAAAAAAAAAOAAIAAAAAAAAAAAANAAAAAAAAAAAAAAAMAP//AAAAAAAAAAAKAP7/AAAAAAAAAAALAP7/AAAAAAAAAAAHAP3/AAAAAAAAAAAIAP3/AAAAAAAAAAAJAP3/AAAAAAAAAAD5/wsAAAAAAAAAAADx/wsAAAAAAAAAAADy/wsAAAAAAAAAAADz/wsAAAAAAAAAAADy/wkAAAAAAAAAAADz/wgAAAAAAAAAAADy/wcAAAAAAAAAAADw/wYAAAAAAAAAAADx/wYAAAAAAAAAAAA=")
+tile_set = ExtResource("2_wcxhj")
+
+[node name="Water_Effect" type="TileMapLayer" parent="TileMapLayers" unique_id=2061503316]
+tile_map_data = PackedByteArray("AAD5/wMAAgABAAIAAAD3/wQAAgABAAIAAAD4/wQAAgABAAIAAAD5/wQAAgABAAIAAAD6/wQAAgABAAIAAAD3/wUAAgABAAIAAAD4/wUAAgABAAIAAAD5/wUAAgABAAIAAAD6/wUAAgABAAIAAAD7/wUAAgABAAIAAAD4/wYAAgABAAIAAAD5/wYAAgABAAIAAAD6/wYAAgABAAIAAAA=")
 tile_set = ExtResource("2_yplfv")
 
 [node name="OnTheGround" type="Node2D" parent="." unique_id=836096441]
@@ -246,3 +256,10 @@ dialogue = ExtResource("5_st5c4")
 animation_player = NodePath("../OnTheGround/AnimationPlayer")
 next_scene = "uid://djucserfogpyw"
 metadata/_custom_type_script = "uid://x1mxt6bmei2o"
+
+[node name="PointLight2D2" type="PointLight2D" parent="." unique_id=185036849]
+position = Vector2(868.00006, -160)
+scale = Vector2(10.280001, 4.5200005)
+color = Color(0.89212793, 0.677683, 0.22651011, 0.8235294)
+energy = 1.31
+texture = ExtResource("6_m8v7q")

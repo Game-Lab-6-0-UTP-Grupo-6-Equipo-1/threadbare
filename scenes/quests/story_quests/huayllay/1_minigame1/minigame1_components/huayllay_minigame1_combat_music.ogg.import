@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/huayllay_minigame1_combat_music.ogg-001f51f90
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0

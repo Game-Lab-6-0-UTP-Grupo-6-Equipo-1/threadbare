@@ -4,6 +4,15 @@
 do animation_player.play(&"walk_on")
 do animation_player.animation.finished
 Luis: “Nunca creí que la luz del sol se viera tan hermosa…"
-Luis: "Es hora de volver a casa... ¿Por dónde es el camino?"
+Luis: "Ese frío pavoroso que me helaba la sangre... ya no está. La maldición del Anchancho se ha desvanecido."
+Luis: "Hubo un momento, en medio de esa oscuridad, en el que de verdad pensé que mis huesos se quedarían allí para siempre como los que no lo lograron"
+Luis: "Qué ciego he sido toda mi vida... Qué frágil es todo." 
+Luis: "A partir de hoy, no volveré a dar por sentado ni un solo segundo."
+Luis: "Es hora de volver a casa. Extraño a mi familia y a mis amigos"
+Luis: "Aunque, con todo este alboroto, creo que me desorienté. ¿Por dónde era el camino?"
 do animation_player.play(&"walk_off")
+Narrador: "Con el Anchancho vencido, Luis no solo dejó atrás la oscuridad de la cueva..."
+Narrador: "También dejó atrás su antigua forma de ver el mundo, llevándose consigo el mayor de los tesoros:"
+Narrador: "Una segunda oportunidad para vivir."
+do animation_player.animation.finished
 => END
